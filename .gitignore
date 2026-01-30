@@ -1,0 +1,12 @@
+*/Generated_Source/*
+*/codegentemp/*
+*/CortexM3/*
+*/DP8051/*
+*/Export/*
+*.hex
+*.elf
+*.cycdt
+*.rpt
+*.cyfit
+*.svd
+*.log
