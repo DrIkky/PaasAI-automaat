@@ -46,12 +46,11 @@ void MoveServo(void (*writeCompareFunc)(uint16), uint8 count)
 {
     for(int i=0; i<count; i++)
     {
-        writeCompareFunc(600);  // Links
-        CyDelay(800);
         writeCompareFunc(2400); // Rechts
         CyDelay(800);
+        writeCompareFunc(1500);  // Midden
+        CyDelay(800);
     }
-    writeCompareFunc(1500); // Midden
 }
 
 int main(void)
