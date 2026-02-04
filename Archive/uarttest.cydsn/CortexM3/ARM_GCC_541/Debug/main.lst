@@ -1,0 +1,827 @@
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** #include "project.h"
+   2:main.c        **** 
+   3:main.c        **** int main(void)
+   4:main.c        **** {
+  28              		.loc 1 4 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+   5:main.c        ****     CyGlobalIntEnable; 
+  36              		.loc 1 5 0
+  37              		.syntax unified
+  38              	@ 5 "main.c" 1
+  39 0002 62B6     		CPSIE   i
+  40              	@ 0 "" 2
+   6:main.c        ****     
+   7:main.c        ****     /* 1. Start the UART */
+   8:main.c        ****     UART_1_Start();
+  41              		.loc 1 8 0
+  42              		.thumb
+  43              		.syntax unified
+  44 0004 FFF7FEFF 		bl	UART_1_Start
+  45              	.LVL0:
+  46              	.LBB2:
+   9:main.c        ****     
+  10:main.c        ****     /* 2. Flash LED 3 times on startup so you know the PSoC is alive */
+  11:main.c        ****     for(int i=0; i<3; i++) {
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 2
+
+
+  47              		.loc 1 11 0
+  48 0008 0024     		movs	r4, #0
+  49 000a 0CE0     		b	.L2
+  50              	.LVL1:
+  51              	.L3:
+  12:main.c        ****         Pin_LED_Write(1);
+  52              		.loc 1 12 0 discriminator 3
+  53 000c 0120     		movs	r0, #1
+  54 000e FFF7FEFF 		bl	Pin_LED_Write
+  55              	.LVL2:
+  13:main.c        ****         CyDelay(100);
+  56              		.loc 1 13 0 discriminator 3
+  57 0012 6420     		movs	r0, #100
+  58 0014 FFF7FEFF 		bl	CyDelay
+  59              	.LVL3:
+  14:main.c        ****         Pin_LED_Write(0);
+  60              		.loc 1 14 0 discriminator 3
+  61 0018 0020     		movs	r0, #0
+  62 001a FFF7FEFF 		bl	Pin_LED_Write
+  63              	.LVL4:
+  15:main.c        ****         CyDelay(100);
+  64              		.loc 1 15 0 discriminator 3
+  65 001e 6420     		movs	r0, #100
+  66 0020 FFF7FEFF 		bl	CyDelay
+  67              	.LVL5:
+  11:main.c        ****         Pin_LED_Write(1);
+  68              		.loc 1 11 0 discriminator 3
+  69 0024 0134     		adds	r4, r4, #1
+  70              	.LVL6:
+  71              	.L2:
+  11:main.c        ****         Pin_LED_Write(1);
+  72              		.loc 1 11 0 is_stmt 0 discriminator 1
+  73 0026 022C     		cmp	r4, #2
+  74 0028 F0DD     		ble	.L3
+  75              	.L4:
+  76              	.LBE2:
+  16:main.c        ****     }
+  17:main.c        **** 
+  18:main.c        ****     uint8 rxData;
+  19:main.c        **** 
+  20:main.c        ****     for(;;)
+  21:main.c        ****     {
+  22:main.c        ****         /* Check if data is available */
+  23:main.c        ****         if (UART_1_GetRxBufferSize() > 0)
+  77              		.loc 1 23 0 is_stmt 1
+  78 002a FFF7FEFF 		bl	UART_1_GetRxBufferSize
+  79              	.LVL7:
+  80 002e 0028     		cmp	r0, #0
+  81 0030 FBD0     		beq	.L4
+  24:main.c        ****         {
+  25:main.c        ****             /* Read one byte */
+  26:main.c        ****             rxData = UART_1_GetByte();
+  82              		.loc 1 26 0
+  83 0032 FFF7FEFF 		bl	UART_1_GetByte
+  84              	.LVL8:
+  85 0036 C0B2     		uxtb	r0, r0
+  86              	.LVL9:
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 3
+
+
+  27:main.c        ****             
+  28:main.c        ****             /* Logic: We saw on ESP32 that the first byte is 65 (0x65).
+  29:main.c        ****                If we receive 65, toggle the LED. 
+  30:main.c        ****             */
+  31:main.c        ****             if (rxData == 0x65) // 0x65 is Hex for 65
+  87              		.loc 1 31 0
+  88 0038 6528     		cmp	r0, #101
+  89 003a F6D1     		bne	.L4
+  32:main.c        ****             {
+  33:main.c        ****                 Pin_LED_Write( !Pin_LED_Read() );
+  90              		.loc 1 33 0
+  91 003c FFF7FEFF 		bl	Pin_LED_Read
+  92              	.LVL10:
+  93 0040 B0FA80F0 		clz	r0, r0
+  94 0044 4009     		lsrs	r0, r0, #5
+  95 0046 FFF7FEFF 		bl	Pin_LED_Write
+  96              	.LVL11:
+  34:main.c        ****                 
+  35:main.c        ****                 /* Optional: Clear buffer to ignore the trailing FF FF FF 
+  36:main.c        ****                    so we don't process "garbage" 
+  37:main.c        ****                 */
+  38:main.c        ****                 UART_1_ClearRxBuffer();
+  97              		.loc 1 38 0
+  98 004a FFF7FEFF 		bl	UART_1_ClearRxBuffer
+  99              	.LVL12:
+ 100 004e ECE7     		b	.L4
+ 101              		.cfi_endproc
+ 102              	.LFE63:
+ 103              		.size	main, .-main
+ 104              		.text
+ 105              	.Letext0:
+ 106              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 107              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 108              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 109              		.file 5 "Generated_Source\\PSoC5/Pin_LED.h"
+ 110              		.file 6 "Generated_Source\\PSoC5/CyLib.h"
+ 111              		.file 7 "Generated_Source\\PSoC5/UART_1.h"
+ 112              		.file 8 "Generated_Source\\PSoC5/core_cm3.h"
+ 113              		.section	.debug_info,"",%progbits
+ 114              	.Ldebug_info0:
+ 115 0000 CF010000 		.4byte	0x1cf
+ 116 0004 0400     		.2byte	0x4
+ 117 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 118 000a 04       		.byte	0x4
+ 119 000b 01       		.uleb128 0x1
+ 120 000c 4F000000 		.4byte	.LASF25
+ 121 0010 0C       		.byte	0xc
+ 122 0011 D8010000 		.4byte	.LASF26
+ 123 0015 15010000 		.4byte	.LASF27
+ 124 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 125 001d 00000000 		.4byte	0
+ 126 0021 00000000 		.4byte	.Ldebug_line0
+ 127 0025 02       		.uleb128 0x2
+ 128 0026 01       		.byte	0x1
+ 129 0027 06       		.byte	0x6
+ 130 0028 09020000 		.4byte	.LASF0
+ 131 002c 02       		.uleb128 0x2
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 4
+
+
+ 132 002d 01       		.byte	0x1
+ 133 002e 08       		.byte	0x8
+ 134 002f 41000000 		.4byte	.LASF1
+ 135 0033 02       		.uleb128 0x2
+ 136 0034 02       		.byte	0x2
+ 137 0035 05       		.byte	0x5
+ 138 0036 E4010000 		.4byte	.LASF2
+ 139 003a 02       		.uleb128 0x2
+ 140 003b 02       		.byte	0x2
+ 141 003c 07       		.byte	0x7
+ 142 003d EF000000 		.4byte	.LASF3
+ 143 0041 03       		.uleb128 0x3
+ 144 0042 1C000000 		.4byte	.LASF9
+ 145 0046 02       		.byte	0x2
+ 146 0047 3F       		.byte	0x3f
+ 147 0048 4C000000 		.4byte	0x4c
+ 148 004c 02       		.uleb128 0x2
+ 149 004d 04       		.byte	0x4
+ 150 004e 05       		.byte	0x5
+ 151 004f F4010000 		.4byte	.LASF4
+ 152 0053 02       		.uleb128 0x2
+ 153 0054 04       		.byte	0x4
+ 154 0055 07       		.byte	0x7
+ 155 0056 DD000000 		.4byte	.LASF5
+ 156 005a 02       		.uleb128 0x2
+ 157 005b 08       		.byte	0x8
+ 158 005c 05       		.byte	0x5
+ 159 005d CA010000 		.4byte	.LASF6
+ 160 0061 02       		.uleb128 0x2
+ 161 0062 08       		.byte	0x8
+ 162 0063 07       		.byte	0x7
+ 163 0064 7E010000 		.4byte	.LASF7
+ 164 0068 04       		.uleb128 0x4
+ 165 0069 04       		.byte	0x4
+ 166 006a 05       		.byte	0x5
+ 167 006b 696E7400 		.ascii	"int\000"
+ 168 006f 02       		.uleb128 0x2
+ 169 0070 04       		.byte	0x4
+ 170 0071 07       		.byte	0x7
+ 171 0072 63010000 		.4byte	.LASF8
+ 172 0076 03       		.uleb128 0x3
+ 173 0077 B9010000 		.4byte	.LASF10
+ 174 007b 03       		.byte	0x3
+ 175 007c 2C       		.byte	0x2c
+ 176 007d 41000000 		.4byte	0x41
+ 177 0081 05       		.uleb128 0x5
+ 178 0082 EE010000 		.4byte	.LASF11
+ 179 0086 04       		.byte	0x4
+ 180 0087 E801     		.2byte	0x1e8
+ 181 0089 2C000000 		.4byte	0x2c
+ 182 008d 02       		.uleb128 0x2
+ 183 008e 04       		.byte	0x4
+ 184 008f 04       		.byte	0x4
+ 185 0090 3B000000 		.4byte	.LASF12
+ 186 0094 02       		.uleb128 0x2
+ 187 0095 08       		.byte	0x8
+ 188 0096 04       		.byte	0x4
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 5
+
+
+ 189 0097 09010000 		.4byte	.LASF13
+ 190 009b 02       		.uleb128 0x2
+ 191 009c 01       		.byte	0x1
+ 192 009d 08       		.byte	0x8
+ 193 009e DF010000 		.4byte	.LASF14
+ 194 00a2 02       		.uleb128 0x2
+ 195 00a3 08       		.byte	0x8
+ 196 00a4 04       		.byte	0x4
+ 197 00a5 FD010000 		.4byte	.LASF15
+ 198 00a9 02       		.uleb128 0x2
+ 199 00aa 04       		.byte	0x4
+ 200 00ab 07       		.byte	0x7
+ 201 00ac C1010000 		.4byte	.LASF16
+ 202 00b0 06       		.uleb128 0x6
+ 203 00b1 10010000 		.4byte	.LASF28
+ 204 00b5 01       		.byte	0x1
+ 205 00b6 03       		.byte	0x3
+ 206 00b7 68000000 		.4byte	0x68
+ 207 00bb 00000000 		.4byte	.LFB63
+ 208 00bf 50000000 		.4byte	.LFE63-.LFB63
+ 209 00c3 01       		.uleb128 0x1
+ 210 00c4 9C       		.byte	0x9c
+ 211 00c5 74010000 		.4byte	0x174
+ 212 00c9 07       		.uleb128 0x7
+ 213 00ca 02010000 		.4byte	.LASF17
+ 214 00ce 01       		.byte	0x1
+ 215 00cf 12       		.byte	0x12
+ 216 00d0 81000000 		.4byte	0x81
+ 217 00d4 00000000 		.4byte	.LLST0
+ 218 00d8 08       		.uleb128 0x8
+ 219 00d9 08000000 		.4byte	.LBB2
+ 220 00dd 22000000 		.4byte	.LBE2-.LBB2
+ 221 00e1 3D010000 		.4byte	0x13d
+ 222 00e5 09       		.uleb128 0x9
+ 223 00e6 6900     		.ascii	"i\000"
+ 224 00e8 01       		.byte	0x1
+ 225 00e9 0B       		.byte	0xb
+ 226 00ea 68000000 		.4byte	0x68
+ 227 00ee 13000000 		.4byte	.LLST1
+ 228 00f2 0A       		.uleb128 0xa
+ 229 00f3 12000000 		.4byte	.LVL2
+ 230 00f7 85010000 		.4byte	0x185
+ 231 00fb 05010000 		.4byte	0x105
+ 232 00ff 0B       		.uleb128 0xb
+ 233 0100 01       		.uleb128 0x1
+ 234 0101 50       		.byte	0x50
+ 235 0102 01       		.uleb128 0x1
+ 236 0103 31       		.byte	0x31
+ 237 0104 00       		.byte	0
+ 238 0105 0A       		.uleb128 0xa
+ 239 0106 18000000 		.4byte	.LVL3
+ 240 010a 90010000 		.4byte	0x190
+ 241 010e 19010000 		.4byte	0x119
+ 242 0112 0B       		.uleb128 0xb
+ 243 0113 01       		.uleb128 0x1
+ 244 0114 50       		.byte	0x50
+ 245 0115 02       		.uleb128 0x2
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 6
+
+
+ 246 0116 08       		.byte	0x8
+ 247 0117 64       		.byte	0x64
+ 248 0118 00       		.byte	0
+ 249 0119 0A       		.uleb128 0xa
+ 250 011a 1E000000 		.4byte	.LVL4
+ 251 011e 85010000 		.4byte	0x185
+ 252 0122 2C010000 		.4byte	0x12c
+ 253 0126 0B       		.uleb128 0xb
+ 254 0127 01       		.uleb128 0x1
+ 255 0128 50       		.byte	0x50
+ 256 0129 01       		.uleb128 0x1
+ 257 012a 30       		.byte	0x30
+ 258 012b 00       		.byte	0
+ 259 012c 0C       		.uleb128 0xc
+ 260 012d 24000000 		.4byte	.LVL5
+ 261 0131 90010000 		.4byte	0x190
+ 262 0135 0B       		.uleb128 0xb
+ 263 0136 01       		.uleb128 0x1
+ 264 0137 50       		.byte	0x50
+ 265 0138 02       		.uleb128 0x2
+ 266 0139 08       		.byte	0x8
+ 267 013a 64       		.byte	0x64
+ 268 013b 00       		.byte	0
+ 269 013c 00       		.byte	0
+ 270 013d 0D       		.uleb128 0xd
+ 271 013e 08000000 		.4byte	.LVL0
+ 272 0142 9B010000 		.4byte	0x19b
+ 273 0146 0D       		.uleb128 0xd
+ 274 0147 2E000000 		.4byte	.LVL7
+ 275 014b A6010000 		.4byte	0x1a6
+ 276 014f 0D       		.uleb128 0xd
+ 277 0150 36000000 		.4byte	.LVL8
+ 278 0154 B1010000 		.4byte	0x1b1
+ 279 0158 0D       		.uleb128 0xd
+ 280 0159 40000000 		.4byte	.LVL10
+ 281 015d BC010000 		.4byte	0x1bc
+ 282 0161 0D       		.uleb128 0xd
+ 283 0162 4A000000 		.4byte	.LVL11
+ 284 0166 85010000 		.4byte	0x185
+ 285 016a 0D       		.uleb128 0xd
+ 286 016b 4E000000 		.4byte	.LVL12
+ 287 016f C7010000 		.4byte	0x1c7
+ 288 0173 00       		.byte	0
+ 289 0174 0E       		.uleb128 0xe
+ 290 0175 56010000 		.4byte	.LASF29
+ 291 0179 08       		.byte	0x8
+ 292 017a 1207     		.2byte	0x712
+ 293 017c 80010000 		.4byte	0x180
+ 294 0180 0F       		.uleb128 0xf
+ 295 0181 76000000 		.4byte	0x76
+ 296 0185 10       		.uleb128 0x10
+ 297 0186 70010000 		.4byte	.LASF18
+ 298 018a 70010000 		.4byte	.LASF18
+ 299 018e 05       		.byte	0x5
+ 300 018f 26       		.byte	0x26
+ 301 0190 10       		.uleb128 0x10
+ 302 0191 15020000 		.4byte	.LASF19
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 7
+
+
+ 303 0195 15020000 		.4byte	.LASF19
+ 304 0199 06       		.byte	0x6
+ 305 019a 76       		.byte	0x76
+ 306 019b 10       		.uleb128 0x10
+ 307 019c 00000000 		.4byte	.LASF20
+ 308 01a0 00000000 		.4byte	.LASF20
+ 309 01a4 07       		.byte	0x7
+ 310 01a5 54       		.byte	0x54
+ 311 01a6 10       		.uleb128 0x10
+ 312 01a7 95010000 		.4byte	.LASF21
+ 313 01ab 95010000 		.4byte	.LASF21
+ 314 01af 07       		.byte	0x7
+ 315 01b0 73       		.byte	0x73
+ 316 01b1 10       		.uleb128 0x10
+ 317 01b2 0D000000 		.4byte	.LASF22
+ 318 01b6 0D000000 		.4byte	.LASF22
+ 319 01ba 07       		.byte	0x7
+ 320 01bb 72       		.byte	0x72
+ 321 01bc 10       		.uleb128 0x10
+ 322 01bd AC010000 		.4byte	.LASF23
+ 323 01c1 AC010000 		.4byte	.LASF23
+ 324 01c5 05       		.byte	0x5
+ 325 01c6 29       		.byte	0x29
+ 326 01c7 10       		.uleb128 0x10
+ 327 01c8 26000000 		.4byte	.LASF24
+ 328 01cc 26000000 		.4byte	.LASF24
+ 329 01d0 07       		.byte	0x7
+ 330 01d1 75       		.byte	0x75
+ 331 01d2 00       		.byte	0
+ 332              		.section	.debug_abbrev,"",%progbits
+ 333              	.Ldebug_abbrev0:
+ 334 0000 01       		.uleb128 0x1
+ 335 0001 11       		.uleb128 0x11
+ 336 0002 01       		.byte	0x1
+ 337 0003 25       		.uleb128 0x25
+ 338 0004 0E       		.uleb128 0xe
+ 339 0005 13       		.uleb128 0x13
+ 340 0006 0B       		.uleb128 0xb
+ 341 0007 03       		.uleb128 0x3
+ 342 0008 0E       		.uleb128 0xe
+ 343 0009 1B       		.uleb128 0x1b
+ 344 000a 0E       		.uleb128 0xe
+ 345 000b 55       		.uleb128 0x55
+ 346 000c 17       		.uleb128 0x17
+ 347 000d 11       		.uleb128 0x11
+ 348 000e 01       		.uleb128 0x1
+ 349 000f 10       		.uleb128 0x10
+ 350 0010 17       		.uleb128 0x17
+ 351 0011 00       		.byte	0
+ 352 0012 00       		.byte	0
+ 353 0013 02       		.uleb128 0x2
+ 354 0014 24       		.uleb128 0x24
+ 355 0015 00       		.byte	0
+ 356 0016 0B       		.uleb128 0xb
+ 357 0017 0B       		.uleb128 0xb
+ 358 0018 3E       		.uleb128 0x3e
+ 359 0019 0B       		.uleb128 0xb
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 8
+
+
+ 360 001a 03       		.uleb128 0x3
+ 361 001b 0E       		.uleb128 0xe
+ 362 001c 00       		.byte	0
+ 363 001d 00       		.byte	0
+ 364 001e 03       		.uleb128 0x3
+ 365 001f 16       		.uleb128 0x16
+ 366 0020 00       		.byte	0
+ 367 0021 03       		.uleb128 0x3
+ 368 0022 0E       		.uleb128 0xe
+ 369 0023 3A       		.uleb128 0x3a
+ 370 0024 0B       		.uleb128 0xb
+ 371 0025 3B       		.uleb128 0x3b
+ 372 0026 0B       		.uleb128 0xb
+ 373 0027 49       		.uleb128 0x49
+ 374 0028 13       		.uleb128 0x13
+ 375 0029 00       		.byte	0
+ 376 002a 00       		.byte	0
+ 377 002b 04       		.uleb128 0x4
+ 378 002c 24       		.uleb128 0x24
+ 379 002d 00       		.byte	0
+ 380 002e 0B       		.uleb128 0xb
+ 381 002f 0B       		.uleb128 0xb
+ 382 0030 3E       		.uleb128 0x3e
+ 383 0031 0B       		.uleb128 0xb
+ 384 0032 03       		.uleb128 0x3
+ 385 0033 08       		.uleb128 0x8
+ 386 0034 00       		.byte	0
+ 387 0035 00       		.byte	0
+ 388 0036 05       		.uleb128 0x5
+ 389 0037 16       		.uleb128 0x16
+ 390 0038 00       		.byte	0
+ 391 0039 03       		.uleb128 0x3
+ 392 003a 0E       		.uleb128 0xe
+ 393 003b 3A       		.uleb128 0x3a
+ 394 003c 0B       		.uleb128 0xb
+ 395 003d 3B       		.uleb128 0x3b
+ 396 003e 05       		.uleb128 0x5
+ 397 003f 49       		.uleb128 0x49
+ 398 0040 13       		.uleb128 0x13
+ 399 0041 00       		.byte	0
+ 400 0042 00       		.byte	0
+ 401 0043 06       		.uleb128 0x6
+ 402 0044 2E       		.uleb128 0x2e
+ 403 0045 01       		.byte	0x1
+ 404 0046 3F       		.uleb128 0x3f
+ 405 0047 19       		.uleb128 0x19
+ 406 0048 03       		.uleb128 0x3
+ 407 0049 0E       		.uleb128 0xe
+ 408 004a 3A       		.uleb128 0x3a
+ 409 004b 0B       		.uleb128 0xb
+ 410 004c 3B       		.uleb128 0x3b
+ 411 004d 0B       		.uleb128 0xb
+ 412 004e 27       		.uleb128 0x27
+ 413 004f 19       		.uleb128 0x19
+ 414 0050 49       		.uleb128 0x49
+ 415 0051 13       		.uleb128 0x13
+ 416 0052 8701     		.uleb128 0x87
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 9
+
+
+ 417 0054 19       		.uleb128 0x19
+ 418 0055 11       		.uleb128 0x11
+ 419 0056 01       		.uleb128 0x1
+ 420 0057 12       		.uleb128 0x12
+ 421 0058 06       		.uleb128 0x6
+ 422 0059 40       		.uleb128 0x40
+ 423 005a 18       		.uleb128 0x18
+ 424 005b 9742     		.uleb128 0x2117
+ 425 005d 19       		.uleb128 0x19
+ 426 005e 01       		.uleb128 0x1
+ 427 005f 13       		.uleb128 0x13
+ 428 0060 00       		.byte	0
+ 429 0061 00       		.byte	0
+ 430 0062 07       		.uleb128 0x7
+ 431 0063 34       		.uleb128 0x34
+ 432 0064 00       		.byte	0
+ 433 0065 03       		.uleb128 0x3
+ 434 0066 0E       		.uleb128 0xe
+ 435 0067 3A       		.uleb128 0x3a
+ 436 0068 0B       		.uleb128 0xb
+ 437 0069 3B       		.uleb128 0x3b
+ 438 006a 0B       		.uleb128 0xb
+ 439 006b 49       		.uleb128 0x49
+ 440 006c 13       		.uleb128 0x13
+ 441 006d 02       		.uleb128 0x2
+ 442 006e 17       		.uleb128 0x17
+ 443 006f 00       		.byte	0
+ 444 0070 00       		.byte	0
+ 445 0071 08       		.uleb128 0x8
+ 446 0072 0B       		.uleb128 0xb
+ 447 0073 01       		.byte	0x1
+ 448 0074 11       		.uleb128 0x11
+ 449 0075 01       		.uleb128 0x1
+ 450 0076 12       		.uleb128 0x12
+ 451 0077 06       		.uleb128 0x6
+ 452 0078 01       		.uleb128 0x1
+ 453 0079 13       		.uleb128 0x13
+ 454 007a 00       		.byte	0
+ 455 007b 00       		.byte	0
+ 456 007c 09       		.uleb128 0x9
+ 457 007d 34       		.uleb128 0x34
+ 458 007e 00       		.byte	0
+ 459 007f 03       		.uleb128 0x3
+ 460 0080 08       		.uleb128 0x8
+ 461 0081 3A       		.uleb128 0x3a
+ 462 0082 0B       		.uleb128 0xb
+ 463 0083 3B       		.uleb128 0x3b
+ 464 0084 0B       		.uleb128 0xb
+ 465 0085 49       		.uleb128 0x49
+ 466 0086 13       		.uleb128 0x13
+ 467 0087 02       		.uleb128 0x2
+ 468 0088 17       		.uleb128 0x17
+ 469 0089 00       		.byte	0
+ 470 008a 00       		.byte	0
+ 471 008b 0A       		.uleb128 0xa
+ 472 008c 898201   		.uleb128 0x4109
+ 473 008f 01       		.byte	0x1
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 10
+
+
+ 474 0090 11       		.uleb128 0x11
+ 475 0091 01       		.uleb128 0x1
+ 476 0092 31       		.uleb128 0x31
+ 477 0093 13       		.uleb128 0x13
+ 478 0094 01       		.uleb128 0x1
+ 479 0095 13       		.uleb128 0x13
+ 480 0096 00       		.byte	0
+ 481 0097 00       		.byte	0
+ 482 0098 0B       		.uleb128 0xb
+ 483 0099 8A8201   		.uleb128 0x410a
+ 484 009c 00       		.byte	0
+ 485 009d 02       		.uleb128 0x2
+ 486 009e 18       		.uleb128 0x18
+ 487 009f 9142     		.uleb128 0x2111
+ 488 00a1 18       		.uleb128 0x18
+ 489 00a2 00       		.byte	0
+ 490 00a3 00       		.byte	0
+ 491 00a4 0C       		.uleb128 0xc
+ 492 00a5 898201   		.uleb128 0x4109
+ 493 00a8 01       		.byte	0x1
+ 494 00a9 11       		.uleb128 0x11
+ 495 00aa 01       		.uleb128 0x1
+ 496 00ab 31       		.uleb128 0x31
+ 497 00ac 13       		.uleb128 0x13
+ 498 00ad 00       		.byte	0
+ 499 00ae 00       		.byte	0
+ 500 00af 0D       		.uleb128 0xd
+ 501 00b0 898201   		.uleb128 0x4109
+ 502 00b3 00       		.byte	0
+ 503 00b4 11       		.uleb128 0x11
+ 504 00b5 01       		.uleb128 0x1
+ 505 00b6 31       		.uleb128 0x31
+ 506 00b7 13       		.uleb128 0x13
+ 507 00b8 00       		.byte	0
+ 508 00b9 00       		.byte	0
+ 509 00ba 0E       		.uleb128 0xe
+ 510 00bb 34       		.uleb128 0x34
+ 511 00bc 00       		.byte	0
+ 512 00bd 03       		.uleb128 0x3
+ 513 00be 0E       		.uleb128 0xe
+ 514 00bf 3A       		.uleb128 0x3a
+ 515 00c0 0B       		.uleb128 0xb
+ 516 00c1 3B       		.uleb128 0x3b
+ 517 00c2 05       		.uleb128 0x5
+ 518 00c3 49       		.uleb128 0x49
+ 519 00c4 13       		.uleb128 0x13
+ 520 00c5 3F       		.uleb128 0x3f
+ 521 00c6 19       		.uleb128 0x19
+ 522 00c7 3C       		.uleb128 0x3c
+ 523 00c8 19       		.uleb128 0x19
+ 524 00c9 00       		.byte	0
+ 525 00ca 00       		.byte	0
+ 526 00cb 0F       		.uleb128 0xf
+ 527 00cc 35       		.uleb128 0x35
+ 528 00cd 00       		.byte	0
+ 529 00ce 49       		.uleb128 0x49
+ 530 00cf 13       		.uleb128 0x13
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 11
+
+
+ 531 00d0 00       		.byte	0
+ 532 00d1 00       		.byte	0
+ 533 00d2 10       		.uleb128 0x10
+ 534 00d3 2E       		.uleb128 0x2e
+ 535 00d4 00       		.byte	0
+ 536 00d5 3F       		.uleb128 0x3f
+ 537 00d6 19       		.uleb128 0x19
+ 538 00d7 3C       		.uleb128 0x3c
+ 539 00d8 19       		.uleb128 0x19
+ 540 00d9 6E       		.uleb128 0x6e
+ 541 00da 0E       		.uleb128 0xe
+ 542 00db 03       		.uleb128 0x3
+ 543 00dc 0E       		.uleb128 0xe
+ 544 00dd 3A       		.uleb128 0x3a
+ 545 00de 0B       		.uleb128 0xb
+ 546 00df 3B       		.uleb128 0x3b
+ 547 00e0 0B       		.uleb128 0xb
+ 548 00e1 00       		.byte	0
+ 549 00e2 00       		.byte	0
+ 550 00e3 00       		.byte	0
+ 551              		.section	.debug_loc,"",%progbits
+ 552              	.Ldebug_loc0:
+ 553              	.LLST0:
+ 554 0000 38000000 		.4byte	.LVL9
+ 555 0004 3F000000 		.4byte	.LVL10-1
+ 556 0008 0100     		.2byte	0x1
+ 557 000a 50       		.byte	0x50
+ 558 000b 00000000 		.4byte	0
+ 559 000f 00000000 		.4byte	0
+ 560              	.LLST1:
+ 561 0013 08000000 		.4byte	.LVL0
+ 562 0017 0C000000 		.4byte	.LVL1
+ 563 001b 0200     		.2byte	0x2
+ 564 001d 30       		.byte	0x30
+ 565 001e 9F       		.byte	0x9f
+ 566 001f 0C000000 		.4byte	.LVL1
+ 567 0023 50000000 		.4byte	.LFE63
+ 568 0027 0100     		.2byte	0x1
+ 569 0029 54       		.byte	0x54
+ 570 002a 00000000 		.4byte	0
+ 571 002e 00000000 		.4byte	0
+ 572              		.section	.debug_aranges,"",%progbits
+ 573 0000 1C000000 		.4byte	0x1c
+ 574 0004 0200     		.2byte	0x2
+ 575 0006 00000000 		.4byte	.Ldebug_info0
+ 576 000a 04       		.byte	0x4
+ 577 000b 00       		.byte	0
+ 578 000c 0000     		.2byte	0
+ 579 000e 0000     		.2byte	0
+ 580 0010 00000000 		.4byte	.LFB63
+ 581 0014 50000000 		.4byte	.LFE63-.LFB63
+ 582 0018 00000000 		.4byte	0
+ 583 001c 00000000 		.4byte	0
+ 584              		.section	.debug_ranges,"",%progbits
+ 585              	.Ldebug_ranges0:
+ 586 0000 00000000 		.4byte	.LFB63
+ 587 0004 50000000 		.4byte	.LFE63
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 12
+
+
+ 588 0008 00000000 		.4byte	0
+ 589 000c 00000000 		.4byte	0
+ 590              		.section	.debug_line,"",%progbits
+ 591              	.Ldebug_line0:
+ 592 0000 AD010000 		.section	.debug_str,"MS",%progbits,1
+ 592      02007001 
+ 592      00000201 
+ 592      FB0E0D00 
+ 592      01010101 
+ 593              	.LASF20:
+ 594 0000 55415254 		.ascii	"UART_1_Start\000"
+ 594      5F315F53 
+ 594      74617274 
+ 594      00
+ 595              	.LASF22:
+ 596 000d 55415254 		.ascii	"UART_1_GetByte\000"
+ 596      5F315F47 
+ 596      65744279 
+ 596      746500
+ 597              	.LASF9:
+ 598 001c 5F5F696E 		.ascii	"__int32_t\000"
+ 598      7433325F 
+ 598      7400
+ 599              	.LASF24:
+ 600 0026 55415254 		.ascii	"UART_1_ClearRxBuffer\000"
+ 600      5F315F43 
+ 600      6C656172 
+ 600      52784275 
+ 600      66666572 
+ 601              	.LASF12:
+ 602 003b 666C6F61 		.ascii	"float\000"
+ 602      7400
+ 603              	.LASF1:
+ 604 0041 756E7369 		.ascii	"unsigned char\000"
+ 604      676E6564 
+ 604      20636861 
+ 604      7200
+ 605              	.LASF25:
+ 606 004f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 606      43313120 
+ 606      352E342E 
+ 606      31203230 
+ 606      31363036 
+ 607 0082 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 607      20726576 
+ 607      6973696F 
+ 607      6E203233 
+ 607      37373135 
+ 608 00b5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 608      66756E63 
+ 608      74696F6E 
+ 608      2D736563 
+ 608      74696F6E 
+ 609              	.LASF5:
+ 610 00dd 6C6F6E67 		.ascii	"long unsigned int\000"
+ 610      20756E73 
+ 610      69676E65 
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 13
+
+
+ 610      6420696E 
+ 610      7400
+ 611              	.LASF3:
+ 612 00ef 73686F72 		.ascii	"short unsigned int\000"
+ 612      7420756E 
+ 612      7369676E 
+ 612      65642069 
+ 612      6E7400
+ 613              	.LASF17:
+ 614 0102 72784461 		.ascii	"rxData\000"
+ 614      746100
+ 615              	.LASF13:
+ 616 0109 646F7562 		.ascii	"double\000"
+ 616      6C6500
+ 617              	.LASF28:
+ 618 0110 6D61696E 		.ascii	"main\000"
+ 618      00
+ 619              	.LASF27:
+ 620 0115 433A5C55 		.ascii	"C:\\Users\\bouma\\Documents\\PSoC Creator\\Workspac"
+ 620      73657273 
+ 620      5C626F75 
+ 620      6D615C44 
+ 620      6F63756D 
+ 621 0143 6530315C 		.ascii	"e01\\uarttest.cydsn\000"
+ 621      75617274 
+ 621      74657374 
+ 621      2E637964 
+ 621      736E00
+ 622              	.LASF29:
+ 623 0156 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 623      52784275 
+ 623      66666572 
+ 623      00
+ 624              	.LASF8:
+ 625 0163 756E7369 		.ascii	"unsigned int\000"
+ 625      676E6564 
+ 625      20696E74 
+ 625      00
+ 626              	.LASF18:
+ 627 0170 50696E5F 		.ascii	"Pin_LED_Write\000"
+ 627      4C45445F 
+ 627      57726974 
+ 627      6500
+ 628              	.LASF7:
+ 629 017e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 629      206C6F6E 
+ 629      6720756E 
+ 629      7369676E 
+ 629      65642069 
+ 630              	.LASF21:
+ 631 0195 55415254 		.ascii	"UART_1_GetRxBufferSize\000"
+ 631      5F315F47 
+ 631      65745278 
+ 631      42756666 
+ 631      65725369 
+ 632              	.LASF23:
+ 633 01ac 50696E5F 		.ascii	"Pin_LED_Read\000"
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\ccTbHFpV.s 			page 14
+
+
+ 633      4C45445F 
+ 633      52656164 
+ 633      00
+ 634              	.LASF10:
+ 635 01b9 696E7433 		.ascii	"int32_t\000"
+ 635      325F7400 
+ 636              	.LASF16:
+ 637 01c1 73697A65 		.ascii	"sizetype\000"
+ 637      74797065 
+ 637      00
+ 638              	.LASF6:
+ 639 01ca 6C6F6E67 		.ascii	"long long int\000"
+ 639      206C6F6E 
+ 639      6720696E 
+ 639      7400
+ 640              	.LASF26:
+ 641 01d8 6D61696E 		.ascii	"main.c\000"
+ 641      2E6300
+ 642              	.LASF14:
+ 643 01df 63686172 		.ascii	"char\000"
+ 643      00
+ 644              	.LASF2:
+ 645 01e4 73686F72 		.ascii	"short int\000"
+ 645      7420696E 
+ 645      7400
+ 646              	.LASF11:
+ 647 01ee 75696E74 		.ascii	"uint8\000"
+ 647      3800
+ 648              	.LASF4:
+ 649 01f4 6C6F6E67 		.ascii	"long int\000"
+ 649      20696E74 
+ 649      00
+ 650              	.LASF15:
+ 651 01fd 6C6F6E67 		.ascii	"long double\000"
+ 651      20646F75 
+ 651      626C6500 
+ 652              	.LASF0:
+ 653 0209 7369676E 		.ascii	"signed char\000"
+ 653      65642063 
+ 653      68617200 
+ 654              	.LASF19:
+ 655 0215 43794465 		.ascii	"CyDelay\000"
+ 655      6C617900 
+ 656              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
