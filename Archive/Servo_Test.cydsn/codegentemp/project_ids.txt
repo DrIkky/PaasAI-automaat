@@ -1,0 +1,8 @@
+C:\Users\bouma\Documents\PSoC Creator\Workspace01\Servo_Test.cydsn\Servo_Test.cyprj|f0dc13d2-08fa-4df3-a085-ef51490e16ac
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|a3133d2a-792c-4b88-acba-c68800d30f49
+C:\Users\bouma\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|ef924999-d9f3-4379-8bd3-65b99ce4b894
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|e8987db6-f31d-4d76-b48d-08075615d611
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|0972fc6e-3f18-4650-a494-b5fa93d3b8d3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|f7c75ed2-d52f-45a6-ae8c-3da466446f9d
+C:\Users\bouma\Documents\PSoC Creator\Workspace01\uarttest.cydsn\uarttest.cyprj|21d32b36-c7bc-48c6-a59b-49bc3edfd4e5
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc3\AnalogDevice\PSoC35AnalogDevice.cylib\PSoC35AnalogDevice.cyprj|4b7d320c-3cf3-449a-b27f-106639772f1f

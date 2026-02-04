@@ -8,6 +8,7 @@
 <files />
 <projects>
 <v>.\Servo_Testv2.cydsn\Servo_Testv2.cyprj</v>
+<v>.\SafetyLatch.cylib\SafetyLatch.cyprj</v>
 </projects>
 <workspace_id v="90b468de-a265-449e-8e1c-8d2946d90da9" />
 <WriteAppVersionLastSavedWith v="4.4.0.80" />
