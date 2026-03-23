@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\Servo_Testv2\TopDesign">
 <ExpandedNodeIds>
 <v>Workspace01</v>
 <v>Workspace01\SafetyLatch</v>
@@ -242,7 +242,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1066, 523" SelectedTabbedMdiWindow="1c459e2b-07c1-4ca4-bc47-a2c93a78ed68"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="a3df719b-88e1-4806-8bf2-1a690409443a" /><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\TopDesign\TopDesign.cysch" Guid="29e81b65-73c0-4352-a11a-0ad4517759a0" /><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\main.c" Guid="1c459e2b-07c1-4ca4-bc47-a2c93a78ed68" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="959, 523" SelectedTabbedMdiWindow="29e81b65-73c0-4352-a11a-0ad4517759a0"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="a3df719b-88e1-4806-8bf2-1a690409443a" /><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\TopDesign\TopDesign.cysch" Guid="29e81b65-73c0-4352-a11a-0ad4517759a0" /><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\main.c" Guid="1c459e2b-07c1-4ca4-bc47-a2c93a78ed68" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

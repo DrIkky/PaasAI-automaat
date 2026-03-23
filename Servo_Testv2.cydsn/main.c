@@ -1,9 +1,7 @@
 #include "project.h"
 
-/* Lijstje om de 4 waardes in op te slaan */
 volatile uint8 servoCounts[4] = {0, 0, 0, 0}; 
 
-/* Vlaggen en tellers */
 volatile uint8 startCommandReceived = 0;
 volatile uint8 receptionState = 0; // 0=Wacht op S, 1=Data verzamelen
 volatile uint8 byteIndex = 0;      // Welke van de 4 zijn we aan het lezen?
@@ -14,7 +12,6 @@ CY_ISR(MyUART_Handler)
     {
         uint8 receivedByte = UART_1_GetChar();
         
-        // STAAT 0: Wachten op 'S'
         if(receptionState == 0)
         {
             if(receivedByte == 'S')
@@ -57,7 +54,6 @@ int main(void)
 {
     CyGlobalIntEnable; 
 
-    /* Start Alles */
     UART_1_Start();
     isr_UART_StartEx(MyUART_Handler);
     
@@ -66,7 +62,6 @@ int main(void)
     PWM_3_Start();
     PWM_4_Start();
     
-    // Zet alles in het midden bij start
     PWM_1_WriteCompare(1500);
     PWM_2_WriteCompare(1500);
     PWM_3_WriteCompare(1500);
@@ -77,9 +72,6 @@ int main(void)
         if(startCommandReceived == 1)
         {
             startCommandReceived = 0; // Vlag omlaag
-            
-            // Nu voeren we ze één voor één uit (Sequentieel)
-            // Dit is het deel dat je met RTOS straks TEGELIJK kunt laten doen!
             
             // Servo 1 (n0)
             MoveServo(PWM_1_WriteCompare, servoCounts[0]);
