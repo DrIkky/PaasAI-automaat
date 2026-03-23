@@ -1,5 +1,9 @@
 #include "project.h"
 
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+
 volatile uint8 servoCounts[4] = {0, 0, 0, 0}; 
 
 volatile uint8 startCommandReceived = 0;
