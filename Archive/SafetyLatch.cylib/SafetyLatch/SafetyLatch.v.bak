@@ -1,0 +1,44 @@
+
+//`#start header` -- edit after this line, do not edit this line
+// ========================================
+//
+// Copyright YOUR COMPANY, THE YEAR
+// All Rights Reserved
+// UNPUBLISHED, LICENSED SOFTWARE.
+//
+// CONFIDENTIAL AND PROPRIETARY INFORMATION
+// WHICH IS THE PROPERTY OF your company.
+//
+// ========================================
+`include "cypress.v"
+//`#end` -- edit above this line, do not edit this line
+// Generated on 02/04/2026 at 19:56
+// Component: SafetyLatch
+module EggCounter (
+    input  wire clk,         // Fast system clock (e.g., 24MHz)
+    input  wire reset,       // Button or software signal to reset the count to 0
+    input  wire laser_in,    // The signal from your laser detector
+    
+    output reg [7:0] count   // 8-bit output (can count up to 255 eggs)
+);
+
+    // Register to remember the previous state of the laser
+    reg laser_history;
+
+    always @(posedge clk) begin
+        if (reset == 1'b1) begin
+            count <= 8'd0;       // Reset count to 0
+            laser_history <= 1'b0;
+        end else begin
+            // 1. Remember what the laser was in the previous clock cycle
+            laser_history <= laser_in;
+            
+            // 2. Check for an EDGE (Beam broken)
+            // Assuming laser_in goes from LOW (0) to HIGH (1) when an egg falls
+            if (laser_in == 1'b1 && laser_history == 1'b0) begin
+                count <= count + 1; // Add 1 to the egg count
+            end
+        end
+    end
+
+endmodule
