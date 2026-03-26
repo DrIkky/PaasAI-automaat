@@ -60,6 +60,10 @@
 <VisibleNodeIds>
 <v>SafetyLatch-000</v>
 <v>SafetyLatch-000\SafetyLatch</v>
+<v>SafetyLatch-000\SafetyLatch\CortexM3</v>
+<v>SafetyLatch-000\SafetyLatch\CortexM3\ARM_GCC_541</v>
+<v>SafetyLatch-000\SafetyLatch\CortexM3\ARM_GCC_541\Debug</v>
+<v>SafetyLatch-000\SafetyLatch\CortexM3\ARM_GCC_541\Debug\SafetyLatch.a</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -81,14 +85,17 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\SafetyLatch\SafetyLatch.cysym" />
+<name v=".\SafetyLatch\SafetyLatch.v" />
+</OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
   Actipro Docking/MDI for WinForms
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1163, 523" SelectedTabbedMdiWindow="a3df719b-88e1-4806-8bf2-1a690409443a"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="a3df719b-88e1-4806-8bf2-1a690409443a" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1163, 523" SelectedTabbedMdiWindow="72c25fea-4cf4-412a-87fb-aff01c118882"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="a3df719b-88e1-4806-8bf2-1a690409443a" /><DocumentWindow Key="C:\PaasAI-automaat\Archive\SafetyLatch.cylib\SafetyLatch\SafetyLatch.cysym" Guid="72c25fea-4cf4-412a-87fb-aff01c118882" /><DocumentWindow Key="C:\PaasAI-automaat\Archive\SafetyLatch.cylib\SafetyLatch\SafetyLatch.v" Guid="48daa18b-4fc5-47e6-8fe3-e1f5277b7fb0" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
