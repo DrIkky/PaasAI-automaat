@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\Servo_Testv2\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\Servo_Testv2\Servo_Testv2.cydwr\Pins">
 <ExpandedNodeIds>
 <v>Workspace01</v>
 <v>Workspace01\Servo_Testv2</v>
@@ -52,6 +52,7 @@
 <v>Workspace01\Servo_Testv2\FreeRTOS\timers.h</v>
 <v>Workspace01\Servo_Testv2\Header Files\cyapicallbacks.h</v>
 <v>Workspace01\Servo_Testv2\Header Files\FreeRTOSConfig.h</v>
+<v>Workspace01\Servo_Testv2\Source Files</v>
 <v>Workspace01\Servo_Testv2\Source Files\main.c</v>
 <v>Workspace01\Servo_Testv2\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
@@ -72,6 +73,7 @@
 <v>Workspace01\Servo_Testv2\FreeRTOS</v>
 <v>Workspace01\Servo_Testv2\Header Files</v>
 <v>Workspace01\Servo_Testv2\Source Files</v>
+<v>Workspace01\Servo_Testv2\Source Files\main.c</v>
 <v>Workspace01\Servo_Testv2\Generated_Source</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
@@ -117,9 +119,11 @@
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\DIR_Pin.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\event_groups.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\heap_4.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_UART.lst</v>
+<v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\list.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
@@ -138,6 +142,8 @@
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_4.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_4_PM.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\queue.lst</v>
+<v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\STEP_Pin.lst</v>
+<v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\Stepper_Clock.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\tasks.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\timers.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
@@ -173,9 +179,11 @@
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\DIR_Pin.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\event_groups.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\heap_4.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_UART.lst</v>
+<v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\list.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
@@ -188,8 +196,6 @@
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
 <v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2.lst</v>
-<v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2_PM.lst</v>
-<v>Workspace01\Servo_Testv2\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_3.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -264,7 +270,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="932, 523" SelectedTabbedMdiWindow="01d8da75-b834-4542-bfc6-b01525fd7dcf"><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\main.c" Guid="1c459e2b-07c1-4ca4-bc47-a2c93a78ed68" /><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\Servo_Testv2.cydwr" Guid="279b9fa8-bce8-4ffe-b427-8033932b2f7c" /><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\TopDesign\TopDesign.cysch" Guid="01d8da75-b834-4542-bfc6-b01525fd7dcf" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="a3df719b-88e1-4806-8bf2-1a690409443a" /><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\EiDetectie\EiDetectie.v" Guid="df89e5d2-4dbd-4beb-b3eb-c7fb5ddb9d1e" /><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\EiDetectie\EiDetectie.cysym" Guid="9231f421-cfe9-46f4-864d-8b182d9edb8a" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1186, 523" SelectedTabbedMdiWindow="279b9fa8-bce8-4ffe-b427-8033932b2f7c"><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\main.c" Guid="1c459e2b-07c1-4ca4-bc47-a2c93a78ed68" /><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\Servo_Testv2.cydwr" Guid="279b9fa8-bce8-4ffe-b427-8033932b2f7c" /><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\TopDesign\TopDesign.cysch" Guid="01d8da75-b834-4542-bfc6-b01525fd7dcf" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="a3df719b-88e1-4806-8bf2-1a690409443a" /><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\EiDetectie\EiDetectie.v" Guid="df89e5d2-4dbd-4beb-b3eb-c7fb5ddb9d1e" /><DocumentWindow Key="C:\PaasAI-automaat\Servo_Testv2.cydsn\EiDetectie\EiDetectie.cysym" Guid="9231f421-cfe9-46f4-864d-8b182d9edb8a" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

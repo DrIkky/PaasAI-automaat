@@ -22,16 +22,17 @@ CY_ISR(MyUART_Handler)
             {
                 receptionState = 1; // Ga data verzamelen
                 byteIndex = 0;      // Begin bij de eerste (n0)
+                
+                // -- DEBUG --
+                LED_Write(~LED_Read()); 
             }
         }
         // STAAT 1: De 4 bytes vullen
         else if(receptionState == 1)
         {
-            // Sla de byte op in het juiste vakje van de lijst
             servoCounts[byteIndex] = receivedByte;
-            byteIndex++; // Ga naar het volgende vakje
+            byteIndex++; 
             
-            // Hebben we ze alle 4 binnen? (0, 1, 2, 3)
             if(byteIndex >= 4)
             {
                 startCommandReceived = 1; // Sein naar Main!
@@ -42,14 +43,13 @@ CY_ISR(MyUART_Handler)
 }
 
 /* Hulpfunctie om servo te bewegen (scheelt typwerk) */
-/* We geven mee: Welke PWM functie, en hoe vaak */
 void MoveServo(void (*writeCompareFunc)(uint16), uint8 count)
 {
     for(int i=0; i<count; i++)
     {
-        writeCompareFunc(2400); // Rechts
+        writeCompareFunc(610);   // links
         CyDelay(800);
-        writeCompareFunc(1500);  // Midden
+        writeCompareFunc(1400);  // Midden
         CyDelay(800);
     }
 }
@@ -58,18 +58,28 @@ int main(void)
 {
     CyGlobalIntEnable; 
 
+    // Start UART and interrupts
     UART_1_Start();
     isr_UART_StartEx(MyUART_Handler);
     
+    // Start Servo PWMs
     PWM_1_Start();
     PWM_2_Start();
     PWM_3_Start();
     PWM_4_Start();
     
+    // Initialize Servos to middle
     PWM_1_WriteCompare(1500);
     PWM_2_WriteCompare(1500);
     PWM_3_WriteCompare(1500);
     PWM_4_WriteCompare(1500);
+
+    // --- STEPPER MOTOR SETUP ---
+    // Set direction (1 or 0). You can change this later in code to reverse it.
+    DIR_Pin_Write(1); 
+    
+    // Start the hardware clock to begin stepping automatically
+    Stepper_Clock_Start();
 
     for(;;)
     {

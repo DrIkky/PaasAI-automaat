@@ -25,6 +25,10 @@
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\LED.h" />
+<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_1.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_2.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_3.h" />
@@ -41,6 +45,9 @@
 <dep name=".\Generated_Source\PSoC5\Pin_LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Stepper_Clock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
@@ -76,6 +83,10 @@
 <file name=".\Generated_Source\PSoC5\CyFlash.h" />
 <file name=".\Generated_Source\PSoC5\CyLib.h" />
 <file name=".\Generated_Source\PSoC5\CySpc.h" />
+<file name=".\Generated_Source\PSoC5\DIR_Pin.h" />
+<file name=".\Generated_Source\PSoC5\DIR_Pin_aliases.h" />
+<file name=".\Generated_Source\PSoC5\LED.h" />
+<file name=".\Generated_Source\PSoC5\LED_aliases.h" />
 <file name=".\Generated_Source\PSoC5\PWM_1.h" />
 <file name=".\Generated_Source\PSoC5\PWM_2.h" />
 <file name=".\Generated_Source\PSoC5\PWM_3.h" />
@@ -92,6 +103,9 @@
 <file name=".\Generated_Source\PSoC5\Pin_LED_aliases.h" />
 <file name=".\Generated_Source\PSoC5\Pin_Laser.h" />
 <file name=".\Generated_Source\PSoC5\Pin_Laser_aliases.h" />
+<file name=".\Generated_Source\PSoC5\STEP_Pin.h" />
+<file name=".\Generated_Source\PSoC5\STEP_Pin_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Stepper_Clock.h" />
 <file name=".\Generated_Source\PSoC5\UART_1.h" />
 <file name=".\Generated_Source\PSoC5\UART_1_IntClock.h" />
 <file name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
@@ -127,6 +141,10 @@
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\LED.h" />
+<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_1.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_2.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_3.h" />
@@ -143,6 +161,9 @@
 <dep name=".\Generated_Source\PSoC5\Pin_LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Stepper_Clock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
@@ -181,6 +202,10 @@
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\LED.h" />
+<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_1.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_2.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_3.h" />
@@ -197,6 +222,9 @@
 <dep name=".\Generated_Source\PSoC5\Pin_LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Stepper_Clock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
@@ -237,6 +265,10 @@
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\LED.h" />
+<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_1.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_2.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_3.h" />
@@ -253,6 +285,9 @@
 <dep name=".\Generated_Source\PSoC5\Pin_LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Stepper_Clock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
@@ -291,6 +326,10 @@
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\LED.h" />
+<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_1.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_2.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_3.h" />
@@ -307,6 +346,9 @@
 <dep name=".\Generated_Source\PSoC5\Pin_LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Stepper_Clock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
@@ -346,6 +388,10 @@
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\LED.h" />
+<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_1.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_2.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_3.h" />
@@ -362,6 +408,9 @@
 <dep name=".\Generated_Source\PSoC5\Pin_LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Stepper_Clock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
@@ -402,6 +451,10 @@
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\LED.h" />
+<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_1.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_2.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_3.h" />
@@ -418,6 +471,9 @@
 <dep name=".\Generated_Source\PSoC5\Pin_LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Stepper_Clock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
@@ -458,6 +514,10 @@
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\LED.h" />
+<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_1.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_2.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_3.h" />
@@ -474,6 +534,9 @@
 <dep name=".\Generated_Source\PSoC5\Pin_LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Stepper_Clock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
@@ -580,6 +643,28 @@
 <dep name=".\Generated_Source\PSoC5\CySpc.c" />
 </file>
 <file name=".\Generated_Source\PSoC5\CySpc.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\DIR_Pin.o">
+<dep name=".\Generated_Source\PSoC5\DIR_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin.c" />
+</file>
+<file name=".\Generated_Source\PSoC5\DIR_Pin.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\LED.o">
+<dep name=".\Generated_Source\PSoC5\LED.h" />
+<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\LED.c" />
+</file>
+<file name=".\Generated_Source\PSoC5\LED.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\PWM_1.o">
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
@@ -750,6 +835,26 @@
 <dep name=".\Generated_Source\PSoC5\Pin_Laser.c" />
 </file>
 <file name=".\Generated_Source\PSoC5\Pin_Laser.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\STEP_Pin.o">
+<dep name=".\Generated_Source\PSoC5\STEP_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin.c" />
+</file>
+<file name=".\Generated_Source\PSoC5\STEP_Pin.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Stepper_Clock.o">
+<dep name=".\Generated_Source\PSoC5\Stepper_Clock.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\Stepper_Clock.c" />
+</file>
+<file name=".\Generated_Source\PSoC5\Stepper_Clock.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\UART_1.o">
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
@@ -894,6 +999,10 @@
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\DIR_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\LED.h" />
+<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_1.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_2.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_3.h" />
@@ -910,6 +1019,9 @@
 <dep name=".\Generated_Source\PSoC5\Pin_LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser.h" />
 <dep name=".\Generated_Source\PSoC5\Pin_Laser_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin.h" />
+<dep name=".\Generated_Source\PSoC5\STEP_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Stepper_Clock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1.h" />
 <dep name=".\Generated_Source\PSoC5\UART_1_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
@@ -1046,6 +1158,10 @@
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Clock_2.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Pin_LED.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Pin_Laser.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\LED.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\DIR_Pin.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\STEP_Pin.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Stepper_Clock.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Servo_Testv2.a" />
 <dep name="${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" />
 </file>
@@ -1108,6 +1224,10 @@
 <name_val_pair name="FreeRTOS\Kernel\src\tasks.c" v="-mcpu=cortex-m3 -mthumb -I.\FreeRTOS\Kernel\include -I.\FreeRTOS\Kernel\portable\GCC\ARM_CM3 -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="FreeRTOS\Kernel\src\timers.c" v="-mcpu=cortex-m3 -mthumb -I.\FreeRTOS\Kernel\include -I.\FreeRTOS\Kernel\portable\GCC\ARM_CM3 -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="Generated_Source\PSoC5\Pin_Laser.c" v="-mcpu=cortex-m3 -mthumb -I.\FreeRTOS\Kernel\include -I.\FreeRTOS\Kernel\portable\GCC\ARM_CM3 -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\LED.c" v="-mcpu=cortex-m3 -mthumb -I.\FreeRTOS\Kernel\include -I.\FreeRTOS\Kernel\portable\GCC\ARM_CM3 -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\DIR_Pin.c" v="-mcpu=cortex-m3 -mthumb -I.\FreeRTOS\Kernel\include -I.\FreeRTOS\Kernel\portable\GCC\ARM_CM3 -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\STEP_Pin.c" v="-mcpu=cortex-m3 -mthumb -I.\FreeRTOS\Kernel\include -I.\FreeRTOS\Kernel\portable\GCC\ARM_CM3 -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Stepper_Clock.c" v="-mcpu=cortex-m3 -mthumb -I.\FreeRTOS\Kernel\include -I.\FreeRTOS\Kernel\portable\GCC\ARM_CM3 -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\bouma\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\PaasAI-automaat\Servo_Testv2.cydsn\Servo_Testv2.cyprj -d CY8C5888LTI-LP097 -s C:\PaasAI-automaat\Servo_Testv2.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
@@ -1727,6 +1847,17 @@
 <v>Generated_Source\PSoC5\Pin_Laser_aliases.h</v>
 <v>Generated_Source\PSoC5\Pin_Laser.c</v>
 <v>Generated_Source\PSoC5\Pin_Laser.h</v>
+<v>Generated_Source\PSoC5\LED_aliases.h</v>
+<v>Generated_Source\PSoC5\LED.c</v>
+<v>Generated_Source\PSoC5\LED.h</v>
+<v>Generated_Source\PSoC5\DIR_Pin_aliases.h</v>
+<v>Generated_Source\PSoC5\DIR_Pin.c</v>
+<v>Generated_Source\PSoC5\DIR_Pin.h</v>
+<v>Generated_Source\PSoC5\STEP_Pin_aliases.h</v>
+<v>Generated_Source\PSoC5\STEP_Pin.c</v>
+<v>Generated_Source\PSoC5\STEP_Pin.h</v>
+<v>Generated_Source\PSoC5\Stepper_Clock.c</v>
+<v>Generated_Source\PSoC5\Stepper_Clock.h</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -1736,7 +1867,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="134189182022880312" />
+<deps_time v="134190900590056589" />
 <top_block v="TopDesign" />
 <last_generation v="20" />
 <pdl_path v="" />
@@ -1746,7 +1877,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="134189182110746060" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="134190900700677936" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
