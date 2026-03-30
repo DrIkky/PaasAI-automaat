@@ -3,45 +3,57 @@
 Dit repository bevat de broncode voor het Embedded Systems project (Periode 2.2/2.3). 
 
 ## Projectbeschrijving
-[cite_start]In dit project wordt een embedded systeem ontwikkeld met de **PSoC 5** als hoofdcontroller[cite: 53]. [cite_start]Het systeem combineert actuatoren (servo's) met een HMI (Human Machine Interface) en moet uiteindelijk draaien op een **RTOS** (Real-Time Operating System)[cite: 58].
+In dit project wordt een embedded systeem ontwikkeld met de **PSoC 5** als hoofdcontroller. Het systeem combineert actuatoren (servo's en een stappenmotor) met een HMI (Human Machine Interface) touchscreen en slimme sensoren. Uiteindelijk moet het systeem draaien op een **RTOS** (Real-Time Operating System).
 
 ## Hardware Setup
 Het project maakt gebruik van de volgende componenten:
 
 * **Microcontroller:** Infineon PSoC 5LP (CY8CKIT-059).
 * **Display:** Nextion NX8048P070 (7.0" HMI Touch Display).
-* **Actuator:** SG90 Micro Servo (50Hz PWM).
-* **Voeding:** Externe 5V voeding (Gedeelde massa met PSoC).
+* **Actuatoren:** 4x SG90 Micro Servo (50Hz PWM) & 1x Nema 17 Stappenmotor (met TMC2209 driver).
+* **Sensoren:** HC-SR04 Ultrasoonsensor & KY-008 Lasersensor.
+* **Voeding:** Externe Meanwell voeding (5V & 12V, met gedeelde massa met PSoC).
 
-### Pinout Configuratie
-| Component | Pin op PSoC | Opmerking |
+### Pinout Configuratie (PSoC Creator)
+| Component / Signaal | Pin op PSoC | Opmerking |
 | :--- | :--- | :--- |
-| **Servo PWM** | P2[1] | Aansturing (50Hz) |
-| **Nextion TX** | P12[6] (RX) | UART Ontvangst |
-| **Nextion RX** | P12[7] (TX) | UART Verzending |
-| **GND** | GND | **Cruciaal:** Verbind alle gronden! |
+| **Rx_1** | P12[2] | UART Ontvangst (Touchscreen TX) |
+| **Tx_1** | P12[3] | UART Verzending (Touchscreen RX) |
+| **Pin_1** | P3[0] | PWM Aansturing Hopper 1 |
+| **Pin_2** | P3[2] | PWM Aansturing Hopper 2 |
+| **Pin_3** | P3[4] | PWM Aansturing Hopper 3 |
+| **Pin_4** | P3[6] | PWM Aansturing Hopper 4 |
+| **Pin_Step** | P0[7] | Stappenmotor Step-signaal |
+| **Pin_Dir** | P0[6] | Stappenmotor Richting-signaal |
+| **Pin_Trigger** | P15[4] | Ultrasoonsensor Trigger |
+| **Pin_Echo** | P15[5] | Ultrasoonsensor Echo |
+| **Pin_Laser** | P0[0] | Lasersensor Input (gekoppeld aan Verilog) |
+| **Pin_LED** | P0[1] | Status LED Output (aangestuurd via Verilog) |
+| **LED** | P2[1] | Extra status LED |
+| **GND** | GND | **Cruciaal:** Verbind alle gronden (Common Ground)! |
 
 ## Software & Tools
 * **IDE:** PSoC Creator 4.4
 * **Interface Design:** Nextion Editor
-* [cite_start]**Versiebeheer:** Git & GitHub Desktop [cite: 12]
+* **Versiebeheer:** Git & GitHub Desktop 
 
 ## Projecteisen (Status)
 Conform de projecthandleiding wordt er gewerkt aan de volgende eisen:
 
-- [x] [cite_start]**PSoC 5 als hoofdrol:** De kern van het systeem[cite: 53].
-- [x] [cite_start]**Versiebeheer:** Git repository is opgezet en schoon gehouden (via .gitignore)[cite: 12].
-- [x] [cite_start]**RTOS:** Implementatie van FreeRTOS (in ontwikkeling)[cite: 58].
-- [x] [cite_start]**HDL/Verilog:** Een hardware component beschreven in Verilog (moet nog ontworpen worden)[cite: 56].
-- [x] [cite_start]**Communicatie:** Eigen driver voor I2C/SPI (later stadium)[cite: 60].
-- [ ] [cite_start]**Energiezuinig:** Low-power optimalisaties[cite: 59].
+- [x] **PSoC 5 als hoofdrol:** De kern van het systeem.
+- [x] **Versiebeheer:** Git repository is opgezet en schoon gehouden (via .gitignore).
+- [x] **RTOS / Architectuur:** Basis interrupt-gedreven architectuur staat, migratie naar FreeRTOS loopt.
+- [x] **HDL/Verilog:** Ei-detectie hardware component geschreven in Verilog en gekoppeld aan de lasersensor.
+- [x] **Communicatie:** Eigen UART-afhandeling voor het scherm. (I2C/SPI gereserveerd voor latere sensoren).
+- [ ] **Energiezuinig:** Low-power optimalisaties (implementatie in finale fase).
 
 ## Installatie & Gebruik
-1.  Clone deze repository naar je lokale machine.
-2.  Open `Workspace01.cywrk` in PSoC Creator.
-3.  Zorg dat de `.gitignore` actief is om gegenereerde bestanden buiten de repo te houden.
-4.  Klik op **Build -> Generate Application** om de drivers te genereren.
-5.  Flash de PSoC via de MiniProg3/KitProg (USB).
+1. Clone deze repository naar je lokale machine.
+2. Open `Workspace01.cywrk` in PSoC Creator.
+3. Zorg dat de `.gitignore` actief is om gegenereerde bestanden buiten de repo te houden.
+4. Klik op **Build -> Generate Application** om de drivers te genereren en de pin-routing toe te passen.
+5. Flash de PSoC via de MiniProg3/KitProg (USB).
 
 ## Versiegeschiedenis
+* **v0.2:** Hardware mapping compleet. Implementatie van stappenmotor, ultrasoonsensor en Verilog ei-detectie.
 * **v0.1:** Initiële opzet. Servo (PWM) en Display (UART) drivers functioneel in bare-metal C.
