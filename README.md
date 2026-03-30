@@ -31,9 +31,9 @@ Conform de projecthandleiding wordt er gewerkt aan de volgende eisen:
 
 - [x] [cite_start]**PSoC 5 als hoofdrol:** De kern van het systeem[cite: 53].
 - [x] [cite_start]**Versiebeheer:** Git repository is opgezet en schoon gehouden (via .gitignore)[cite: 12].
-- [ ] [cite_start]**RTOS:** Implementatie van FreeRTOS (in ontwikkeling)[cite: 58].
-- [ ] [cite_start]**HDL/Verilog:** Een hardware component beschreven in Verilog (moet nog ontworpen worden)[cite: 56].
-- [ ] [cite_start]**Communicatie:** Eigen driver voor I2C/SPI (later stadium)[cite: 60].
+- [x] [cite_start]**RTOS:** Implementatie van FreeRTOS (in ontwikkeling)[cite: 58].
+- [x] [cite_start]**HDL/Verilog:** Een hardware component beschreven in Verilog (moet nog ontworpen worden)[cite: 56].
+- [x] [cite_start]**Communicatie:** Eigen driver voor I2C/SPI (later stadium)[cite: 60].
 - [ ] [cite_start]**Energiezuinig:** Low-power optimalisaties[cite: 59].
 
 ## Installatie & Gebruik
