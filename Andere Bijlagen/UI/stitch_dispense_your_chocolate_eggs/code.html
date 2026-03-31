@@ -1,0 +1,218 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#51352c",
+              "on-surface": "#2e2f2b",
+              "tertiary-container": "#fadcd2",
+              "primary-dim": "#883700",
+              "primary": "#9b3f00",
+              "surface-container": "#eae8e2",
+              "on-tertiary-container": "#624d45",
+              "surface-container-highest": "#deddd6",
+              "on-secondary-fixed-variant": "#705147",
+              "tertiary-fixed": "#fadcd2",
+              "primary-fixed-dim": "#f46800",
+              "primary-fixed": "#ff7a2c",
+              "on-error-container": "#510017",
+              "secondary": "#74544a",
+              "error-container": "#f74b6d",
+              "inverse-primary": "#fd6c00",
+              "on-surface-variant": "#5c5c57",
+              "on-tertiary-fixed-variant": "#6c574f",
+              "surface-dim": "#d5d5cd",
+              "tertiary": "#6c574f",
+              "on-background": "#2e2f2b",
+              "surface-bright": "#f8f6f0",
+              "on-primary-container": "#401600",
+              "on-primary": "#fff0ea",
+              "on-primary-fixed": "#000000",
+              "on-primary-fixed-variant": "#4f1d00",
+              "on-secondary-container": "#65473e",
+              "primary-container": "#ff7a2c",
+              "surface-tint": "#9b3f00",
+              "surface-container-high": "#e4e3dc",
+              "surface": "#f8f6f0",
+              "secondary-dim": "#67483f",
+              "on-secondary": "#ffefeb",
+              "error": "#b41340",
+              "surface-container-low": "#f2f1ea",
+              "secondary-fixed": "#fed3c7",
+              "on-error": "#ffefef",
+              "surface-variant": "#deddd6",
+              "outline-variant": "#aeada8",
+              "on-tertiary-fixed": "#4e3b34",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-dim": "#604b43",
+              "on-tertiary": "#ffefeb",
+              "tertiary-fixed-dim": "#ebcec4",
+              "error-dim": "#a70138",
+              "background": "#f8f6f0",
+              "secondary-container": "#fed3c7",
+              "inverse-on-surface": "#9e9d98",
+              "inverse-surface": "#0e0f0b",
+              "secondary-fixed-dim": "#efc6b9",
+              "outline": "#777772"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .egg-gradient-primary {
+            background: linear-gradient(135deg, #9b3f00 0%, #ff7a2c 100%);
+        }
+        /* Custom size for the kiosk screen */
+        .kiosk-canvas {
+            width: 800px;
+            height: 480px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex items-center justify-center min-h-screen p-0 m-0">
+<div class="kiosk-canvas bg-surface relative flex flex-row">
+<!-- SideNavBar (Shared Component) -->
+<nav class="fixed left-0 top-0 h-full flex flex-col items-center py-4 z-40 bg-[#eae8e2] dark:bg-[#2e2f2b] w-20">
+<div class="flex flex-col items-center gap-1 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="check_circle" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+<span class="font-plus-jakarta-sans text-[10px] font-bold uppercase text-on-surface-variant" style="">Ready</span>
+</div>
+<div class="flex flex-col gap-6 w-full px-2">
+<!-- Home Tab (Active) -->
+<button class="flex flex-col items-center justify-center py-3 bg-[#ffffff] dark:bg-[#3E2723] text-[#9b3f00] rounded-2xl mx-2 scale-95 transition-transform active:duration-100" style="">
+<span class="material-symbols-outlined mb-1" data-icon="home" style="font-variation-settings: &quot;FILL&quot; 1;">home</span>
+<span class="font-plus-jakarta-sans text-[10px] font-bold" style="">Home</span>
+</button>
+<!-- Restart Tab -->
+<button class="flex flex-col items-center justify-center py-3 text-[#5c5c57] dark:text-[#aeada8] hover:bg-[#f2f1ea] dark:hover:bg-[#3E2723] transition-colors rounded-2xl mx-2 scale-95 transition-transform active:duration-100" style="">
+<span class="material-symbols-outlined mb-1" data-icon="refresh" style="">refresh</span>
+<span class="font-plus-jakarta-sans text-[10px] font-bold" style="">Restart</span>
+</button>
+</div>
+<div class="mt-auto">
+<span class="material-symbols-outlined text-on-surface-variant opacity-30" data-icon="help_outline" style="">help_outline</span>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="ml-20 flex-1 flex flex-col p-6 pr-8 gap-6 overflow-hidden">
+<!-- Top Header -->
+<header class="flex justify-between items-end">
+<div>
+<h1 class="text-[2.25rem] font-extrabold leading-tight tracking-tight text-on-surface" style="">Kies je smaak</h1>
+<p class="text-on-surface-variant font-medium" style="">Je kan meerdere smaken combineren</p>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-full">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_basket" style="font-variation-settings: &quot;FILL&quot; 1;">shopping_basket</span>
+<span class="font-bold text-on-surface" style="">&nbsp; &nbsp; &nbsp; &nbsp;Eieren</span>
+</div>
+</header>
+<!-- Flavor Selection Bento Grid -->
+<div class="grid grid-cols-4 gap-4 flex-1">
+<!-- Milk Chocolate -->
+<button class="group flex flex-col p-4 bg-surface-container-low hover:bg-surface-container-lowest transition-all rounded-lg text-left relative overflow-hidden active:scale-95 duration-150" style="">
+<div class="mb-4">
+<span class="material-symbols-outlined text-5xl text-secondary" data-icon="opacity" style="font-variation-settings: &quot;FILL&quot; 1;">opacity</span>
+</div>
+<div class="mt-auto">
+<h3 class="text-lg font-extrabold text-on-surface" style="">Milk</h3>
+<p class="text-xs text-on-surface-variant font-semibold" style="">Smooth &amp; Creamy</p>
+</div>
+<!-- Selection Indicator (Hidden) -->
+<div class="absolute top-3 right-3 opacity-0 group-focus:opacity-100">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+</div>
+</button>
+<!-- Pure Dark (Selected State Simulation) -->
+<button class="group flex flex-col p-4 bg-surface-container-lowest ring-2 ring-primary transition-all rounded-lg text-left relative overflow-hidden active:scale-95 duration-150 shadow-lg" style="">
+<div class="mb-4">
+<span class="material-symbols-outlined text-5xl text-on-surface" data-icon="nest_eco_leaf" style="font-variation-settings: &quot;FILL&quot; 1;">nest_eco_leaf</span>
+</div>
+<div class="mt-auto">
+<h3 class="text-lg font-extrabold text-on-surface" style="">Pure</h3>
+<p class="text-xs text-on-surface-variant font-semibold" style="">70% Intense Cocoa</p>
+</div>
+<div class="absolute top-3 right-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+</div>
+</button>
+<!-- White Chocolate -->
+<button class="group flex flex-col p-4 bg-surface-container-low hover:bg-surface-container-lowest transition-all rounded-lg text-left relative overflow-hidden active:scale-95 duration-150" style="">
+<div class="mb-4">
+<span class="material-symbols-outlined text-5xl text-outline-variant" data-icon="cloud" style="font-variation-settings: &quot;FILL&quot; 1;">cloud</span>
+</div>
+<div class="mt-auto">
+<h3 class="text-lg font-extrabold text-on-surface" style="">White</h3>
+<p class="text-xs text-on-surface-variant font-semibold" style="">Velvety Vanilla</p>
+</div>
+<div class="absolute top-3 right-3 opacity-0 group-focus:opacity-100">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+</div>
+</button>
+<!-- Hazelnut -->
+<button class="group flex flex-col p-4 bg-surface-container-low hover:bg-surface-container-lowest transition-all rounded-lg text-left relative overflow-hidden active:scale-95 duration-150" style="">
+<div class="mb-4">
+<span class="material-symbols-outlined text-5xl text-secondary" data-icon="nutrition" style="font-variation-settings: &quot;FILL&quot; 1;">nutrition</span>
+</div>
+<div class="mt-auto">
+<h3 class="text-lg font-extrabold text-on-surface" style="">Hazelnut</h3>
+<p class="text-xs text-on-surface-variant font-semibold" style="">Roasted &amp; Crunchy</p>
+</div>
+<div class="absolute top-3 right-3 opacity-0 group-focus:opacity-100">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+</div>
+</button>
+</div>
+<!-- Interaction Row: Quantity & Dispense -->
+<div class="flex items-center justify-between gap-6 bg-surface-container rounded-xl p-4">
+<!-- Quantity Selector -->
+<div class="flex items-center gap-4">
+<span class="text-sm font-bold uppercase tracking-wider text-on-surface-variant px-2" style="">Quantity</span>
+<div class="flex items-center bg-surface-container-lowest rounded-full p-1 shadow-sm">
+<button class="w-12 h-12 flex items-center justify-center bg-surface-container-high text-on-surface rounded-full active:scale-90 transition-transform" style="">
+<span class="material-symbols-outlined font-bold" data-icon="remove" style="">remove</span>
+</button>
+<div class="w-16 flex justify-center">
+<span class="text-2xl font-black text-on-surface" style="">1</span>
+</div>
+<button class="w-12 h-12 flex items-center justify-center bg-secondary-container text-on-secondary-container rounded-full active:scale-90 transition-transform" style="">
+<span class="material-symbols-outlined font-bold" data-icon="add" style="">add</span>
+</button>
+</div>
+<span class="text-xs font-bold text-on-surface-variant opacity-60" style="">Max 6</span>
+</div>
+<!-- Action Button -->
+<button class="egg-gradient-primary h-16 px-12 rounded-xl flex items-center justify-center gap-3 shadow-[0_12px_32px_rgba(155,63,0,0.2)] active:scale-95 transition-transform" style="">
+<span class="text-on-primary font-black text-xl tracking-tighter uppercase" style="">Dispense</span>
+<span class="material-symbols-outlined text-on-primary text-2xl" data-icon="bolt" style="font-variation-settings: &quot;FILL&quot; 1;">bolt</span>
+</button>
+</div>
+</main>
+<!-- Visual Decorative Elements (Asymmetry) -->
+<div class="absolute -bottom-16 -right-16 w-48 h-48 bg-primary opacity-5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -top-16 -right-8 w-32 h-32 bg-secondary opacity-5 rounded-full blur-2xl pointer-events-none"></div>
+</div>
+<!-- Hidden Product Branding Anchor (TopAppBar logic handled within layout) -->
+<div class="hidden">
+<span class="style_brand_logo font-plus-jakarta-sans text-xl font-black text-[#2e2f2b]" style="">The Confectioner</span>
+</div>
+</body></html>
