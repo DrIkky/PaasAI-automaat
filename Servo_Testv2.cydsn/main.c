@@ -21,9 +21,6 @@ CY_ISR(MyUART_Handler)
             {
                 receptionState = 1; // Ga data verzamelen
                 byteIndex = 0;      // Begin bij de eerste (n0)
-                
-                // -- DEBUG --
-                // LED_Write(~LED_Read()); 
             }
         }
         // STAAT 1: De 4 bytes vullen
@@ -47,31 +44,66 @@ uint16 MeetAfstandCM(void)
     uint16 timeout = 0;
     uint16 echoTijd = 0;
 
-    // 1. Stuur een trigger puls van 10 microseconden
+    // 1. Stuur een trigger puls
     Pin_Trigger_Write(1);
     CyDelayUs(10);
     Pin_Trigger_Write(0);
 
-    // 2. Wacht tot de Echo pin HOOG wordt (signaal is vertrokken)
+    // 2. Wacht tot de Echo pin HOOG wordt
     while(Pin_Echo_Read() == 0)
     {
         CyDelayUs(1);
         timeout++;
-        if(timeout > 30000) return 999; // Fout/Timeout: Niets gevonden
+        if(timeout > 30000) return 999; // Fout/Timeout
     }
 
-    // 3. Meet hoelang de Echo pin HOOG blijft (signaal reist heen en weer)
+    // 3. Meet hoelang de Echo pin HOOG blijft
     while(Pin_Echo_Read() == 1)
     {
         CyDelayUs(1);
         echoTijd++;
-        if(echoTijd > 30000) return 999; // Fout/Timeout: Buiten bereik
+        if(echoTijd > 30000) return 999; // Fout/Timeout
     }
 
-    // 4. Bereken afstand in cm (Geluidsnelheid conversie voor HC-SR04)
-    // Let op: omdat CyDelayUs(1) in een loopje iets trager is dan 1us in werkelijkheid, 
-    // kan deze deler (normaal 58) in de praktijk iets afwijken. Test dit even!
-    return (echoTijd / 58); 
+    // 4. Bereken afstand (Kalibratie getal, hier 20 zoals je in je code had)
+    return (echoTijd / 20); 
+}
+
+/* NIEUWE Hulpfunctie: Laat de stappenmotor draaien tot een specifieke afstand is bereikt */
+void BeweegBandTotAfstand(uint16 doelAfstand)
+{
+    uint16 huidigeAfstand = MeetAfstandCM();
+    
+    // Zorg voor een geldige startmeting voordat we beginnen
+    while(huidigeAfstand == 999) {
+        huidigeAfstand = MeetAfstandCM();
+        CyDelay(10);
+    }
+
+    // Zolang het doosje dichterbij is dan het doel, moet de band draaien (afstand neemt toe)
+    while(huidigeAfstand < doelAfstand)
+    {
+        // Laat de stappenmotor een klein stukje (bijv. 10 stappen) draaien
+        for(int i=0; i<10; i++)
+        {
+            Pin_Step_Write(1);
+            CyDelayUs(1000); 
+            Pin_Step_Write(0);
+            CyDelayUs(1000);
+        }
+        
+        // Meet daarna opnieuw de afstand
+        uint16 nieuweAfstand = MeetAfstandCM();
+        
+        // Alleen de afstand updaten als het een geldige meting was (geen 999 fout)
+        if(nieuweAfstand != 999) 
+        {
+            huidigeAfstand = nieuweAfstand;
+        }
+    }
+    
+    // Even wachten zodat de band helemaal stilstaat voordat er eieren vallen
+    CyDelay(500); 
 }
 
 /* Hulpfunctie om servo te bewegen */
@@ -108,51 +140,46 @@ int main(void)
 
     // Initialiseer Stepper pinnen
     Pin_Step_Write(0);
-    Pin_Dir_Write(1); // Verander naar 0 als hij de verkeerde kant op draait
+    Pin_Dir_Write(1); 
 
     for(;;)
     {
-        // 1. WACHTEN OP SCHERM
+        // WACHTEN OP SCHERM (Selectie gemaakt?)
         if(startCommandReceived == 1)
         {
-            startCommandReceived = 0; // Vlag omlaag
+            startCommandReceived = 0; // Vlag direct weer omlaag
             
-            // 2. LOPENDE BAND DRAAIEN TOT AFSTAND <= 50cm is
-            uint16 huidigeAfstand = 999;
-            
-            while(huidigeAfstand > 50)
+            // 1. WACHTEN OP DOOSJE (< 5cm)
+            // Blijf hier hangen zolang er geen doosje voor de sensor staat.
+            while(MeetAfstandCM() > 5)
             {
-                // Laat de stappenmotor een klein stukje (bijv. 20 stappen) draaien
-                for(int i=0; i<20; i++)
-                {
-                    Pin_Step_Write(1);
-                    CyDelayUs(1000); // Snelheid (pas aan indien nodig)
-                    Pin_Step_Write(0);
-                    CyDelayUs(1000);
-                }
-                
-                // Meet daarna opnieuw de afstand
-                huidigeAfstand = MeetAfstandCM();
+                CyDelay(200); // Check elke 0.2 seconden
             }
             
-            // Als we uit de while-loop komen, is de afstand 50cm of minder! De band stopt nu vanzelf.
-            // Optioneel even kort wachten tot het doosje echt stilstaat:
-            CyDelay(500);
+            // Even 1 seconde wachten zodat de gebruiker zijn hand weg kan halen
+            CyDelay(1000);
             
-            // 3. EIEREN LATEN VALLEN (SERVO'S DRAAIEN)
-            // Servo 1 (n0)
+            // 2. BEWEEG NAAR SERVO 1 (15 cm)
+            BeweegBandTotAfstand(15);
             MoveServo(PWM_1_WriteCompare, servoCounts[0]);
             
-            // Servo 2 (n1)
+            // 3. BEWEEG NAAR SERVO 2 (29 cm)
+            BeweegBandTotAfstand(29);
             MoveServo(PWM_2_WriteCompare, servoCounts[1]);
             
-            // Servo 3 (n2)
+            // 4. BEWEEG NAAR SERVO 3 (42 cm)
+            BeweegBandTotAfstand(42);
             MoveServo(PWM_3_WriteCompare, servoCounts[2]);
             
-            // Servo 4 (n3)
+            // 5. BEWEEG NAAR SERVO 4 (56 cm)
+            BeweegBandTotAfstand(56);
             MoveServo(PWM_4_WriteCompare, servoCounts[3]);
             
-            // Hierna is het proces klaar en wacht de loop weer op een nieuw 'S' commando!
+            // Optioneel: Laat de band daarna nog een stukje doorrijden (bijv. tot 70cm) 
+            // zodat de klant het bakje er aan het einde af kan pakken.
+            BeweegBandTotAfstand(70);
+            
+            // HIERNA IS DE SEQUENTIE KLAAR EN WACHT HIJ OP DE VOLGENDE KLANT!
         }
     }
 }

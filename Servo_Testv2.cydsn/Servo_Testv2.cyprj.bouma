@@ -1025,6 +1025,14 @@
 </file>
 <file name=".\Generated_Source\PSoC5\isr_UART.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\main.o">
+<dep name=".\FreeRTOS\Kernel\include\FreeRTOS.h" />
+<dep name=".\FreeRTOS\Kernel\include\deprecated_definitions.h" />
+<dep name=".\FreeRTOS\Kernel\include\list.h" />
+<dep name=".\FreeRTOS\Kernel\include\mpu_wrappers.h" />
+<dep name=".\FreeRTOS\Kernel\include\portable.h" />
+<dep name=".\FreeRTOS\Kernel\include\projdefs.h" />
+<dep name=".\FreeRTOS\Kernel\include\queue.h" />
+<dep name=".\FreeRTOS\Kernel\include\task.h" />
 <dep name=".\Generated_Source\PSoC5\Clock_1.h" />
 <dep name=".\Generated_Source\PSoC5\Clock_2.h" />
 <dep name=".\Generated_Source\PSoC5\CyDmac.h" />
@@ -1075,6 +1083,8 @@
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 <dep name=".\Generated_Source\PSoC5\isr_UART.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
+<dep name=".\FreeRTOSConfig.h" />
+<dep name=".\FreeRTOS\Kernel\portable\GCC\ARM_CM3\portmacro.h" />
 <dep name=".\main.c" />
 </file>
 <file name=".\main.c" />
@@ -1953,7 +1963,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="134193508211684158" />
+<deps_time v="134194283860018725" />
 <top_block v="TopDesign" />
 <last_generation v="20" />
 <pdl_path v="" />
@@ -1963,7 +1973,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="134193508299565509" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="134194283944886474" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
