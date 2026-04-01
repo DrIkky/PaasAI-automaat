@@ -1,0 +1,6 @@
+C:\PaasAI-automaat\Archive\ultrasonic_test\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydsn\PSoC5_UltraSonicSensor.cyprj|461aff2c-d4da-44ee-8c2f-3965a8c013c6
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|f4d7c8ff-b6cb-41df-81b4-662732da4347
+C:\Users\bouma\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|af48ad4f-d158-40d6-abac-29d2616ed910
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|e6fccd71-aa97-4ae6-8cd5-fdbf32a5d417
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|ed88a55f-bc8e-44c5-ab0d-98f289da7174
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|816bc19d-f4ec-4d8a-83be-587ed151cd3f

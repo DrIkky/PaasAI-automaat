@@ -1,0 +1,10 @@
+C:/PaasAI-automaat/Archive/ultrasonic_test/PSoC5_UltraSonicSensor/PSoC5_UltraSonicSensor.cydsn/CortexM3/ARM_GCC_541/Debug/CyBootAsmGnu.o : C:/PaasAI-automaat/Archive/ultrasonic_test/PSoC5_UltraSonicSensor/PSoC5_UltraSonicSensor.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s C:/PaasAI-automaat/Archive/ultrasonic_test/PSoC5_UltraSonicSensor/PSoC5_UltraSonicSensor.cydsn/Generated_Source/PSoC5/cydevicegnu.inc C:/PaasAI-automaat/Archive/ultrasonic_test/PSoC5_UltraSonicSensor/PSoC5_UltraSonicSensor.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc C:/PaasAI-automaat/Archive/ultrasonic_test/PSoC5_UltraSonicSensor/PSoC5_UltraSonicSensor.cydsn/Generated_Source/PSoC5/cyfittergnu.inc 
+
+C:/PaasAI-automaat/Archive/ultrasonic_test/PSoC5_UltraSonicSensor/PSoC5_UltraSonicSensor.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s : 
+
+C:/PaasAI-automaat/Archive/ultrasonic_test/PSoC5_UltraSonicSensor/PSoC5_UltraSonicSensor.cydsn/Generated_Source/PSoC5/cydevicegnu.inc : 
+
+C:/PaasAI-automaat/Archive/ultrasonic_test/PSoC5_UltraSonicSensor/PSoC5_UltraSonicSensor.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc : 
+
+C:/PaasAI-automaat/Archive/ultrasonic_test/PSoC5_UltraSonicSensor/PSoC5_UltraSonicSensor.cydsn/Generated_Source/PSoC5/cyfittergnu.inc : 
+

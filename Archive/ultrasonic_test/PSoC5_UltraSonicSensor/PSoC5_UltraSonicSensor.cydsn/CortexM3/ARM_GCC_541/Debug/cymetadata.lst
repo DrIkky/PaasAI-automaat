@@ -1,0 +1,1524 @@
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 984
+  28              	cy_meta_configecc:
+  29 0000 03       		.byte	3
+  30 0001 52       		.byte	82
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 03       		.byte	3
+  34 0005 64       		.byte	100
+  35 0006 00       		.byte	0
+  36 0007 40       		.byte	64
+  37 0008 06       		.byte	6
+  38 0009 00       		.byte	0
+  39 000a 01       		.byte	1
+  40 000b 40       		.byte	64
+  41 000c 32       		.byte	50
+  42 000d 01       		.byte	1
+  43 000e 01       		.byte	1
+  44 000f 40       		.byte	64
+  45 0010 48       		.byte	72
+  46 0011 02       		.byte	2
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 3F       		.byte	63
+  50 0015 03       		.byte	3
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 54       		.byte	84
+  54 0019 04       		.byte	4
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 47       		.byte	71
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 2
+
+
+  58 001d 05       		.byte	5
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 06       		.byte	6
+  62 0021 07       		.byte	7
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 03       		.byte	3
+  66 0025 40       		.byte	64
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 05       		.byte	5
+  70 0029 41       		.byte	65
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 04       		.byte	4
+  74 002d 42       		.byte	66
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 01       		.byte	1
+  78 0031 43       		.byte	67
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 03       		.byte	3
+  82 0035 50       		.byte	80
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 01       		.byte	1
+  86 0039 51       		.byte	81
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 04       		.byte	4
+  90 003d 01       		.byte	1
+  91 003e 60       		.byte	96
+  92 003f 08       		.byte	8
+  93 0040 61       		.byte	97
+  94 0041 08       		.byte	8
+  95 0042 81       		.byte	-127
+  96 0043 72       		.byte	114
+  97 0044 82       		.byte	-126
+  98 0045 0F       		.byte	15
+  99 0046 85       		.byte	-123
+ 100 0047 38       		.byte	56
+ 101 0048 06       		.byte	6
+ 102 0049 01       		.byte	1
+ 103 004a 22       		.byte	34
+ 104 004b 01       		.byte	1
+ 105 004c 36       		.byte	54
+ 106 004d 01       		.byte	1
+ 107 004e 3E       		.byte	62
+ 108 004f 40       		.byte	64
+ 109 0050 58       		.byte	88
+ 110 0051 04       		.byte	4
+ 111 0052 5F       		.byte	95
+ 112 0053 01       		.byte	1
+ 113 0054 00       		.byte	0
+ 114 0055 08       		.byte	8
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 3
+
+
+ 115 0056 04       		.byte	4
+ 116 0057 20       		.byte	32
+ 117 0058 05       		.byte	5
+ 118 0059 08       		.byte	8
+ 119 005a 06       		.byte	6
+ 120 005b 82       		.byte	-126
+ 121 005c 0C       		.byte	12
+ 122 005d 60       		.byte	96
+ 123 005e 0D       		.byte	13
+ 124 005f 02       		.byte	2
+ 125 0060 0F       		.byte	15
+ 126 0061 10       		.byte	16
+ 127 0062 10       		.byte	16
+ 128 0063 80       		.byte	-128
+ 129 0064 14       		.byte	20
+ 130 0065 80       		.byte	-128
+ 131 0066 15       		.byte	21
+ 132 0067 40       		.byte	64
+ 133 0068 17       		.byte	23
+ 134 0069 04       		.byte	4
+ 135 006a 19       		.byte	25
+ 136 006b 40       		.byte	64
+ 137 006c 1C       		.byte	28
+ 138 006d 08       		.byte	8
+ 139 006e 1D       		.byte	29
+ 140 006f 22       		.byte	34
+ 141 0070 1E       		.byte	30
+ 142 0071 20       		.byte	32
+ 143 0072 1F       		.byte	31
+ 144 0073 02       		.byte	2
+ 145 0074 24       		.byte	36
+ 146 0075 04       		.byte	4
+ 147 0076 25       		.byte	37
+ 148 0077 40       		.byte	64
+ 149 0078 27       		.byte	39
+ 150 0079 40       		.byte	64
+ 151 007a 2C       		.byte	44
+ 152 007b 40       		.byte	64
+ 153 007c 2F       		.byte	47
+ 154 007d 6A       		.byte	106
+ 155 007e 34       		.byte	52
+ 156 007f 80       		.byte	-128
+ 157 0080 35       		.byte	53
+ 158 0081 88       		.byte	-120
+ 159 0082 36       		.byte	54
+ 160 0083 A1       		.byte	-95
+ 161 0084 3C       		.byte	60
+ 162 0085 20       		.byte	32
+ 163 0086 3D       		.byte	61
+ 164 0087 80       		.byte	-128
+ 165 0088 3E       		.byte	62
+ 166 0089 8A       		.byte	-118
+ 167 008a 3F       		.byte	63
+ 168 008b 10       		.byte	16
+ 169 008c 45       		.byte	69
+ 170 008d 22       		.byte	34
+ 171 008e 47       		.byte	71
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 4
+
+
+ 172 008f 40       		.byte	64
+ 173 0090 4C       		.byte	76
+ 174 0091 80       		.byte	-128
+ 175 0092 4D       		.byte	77
+ 176 0093 80       		.byte	-128
+ 177 0094 4F       		.byte	79
+ 178 0095 10       		.byte	16
+ 179 0096 57       		.byte	87
+ 180 0097 40       		.byte	64
+ 181 0098 5C       		.byte	92
+ 182 0099 04       		.byte	4
+ 183 009a 6C       		.byte	108
+ 184 009b 10       		.byte	16
+ 185 009c 6D       		.byte	109
+ 186 009d 44       		.byte	68
+ 187 009e 6F       		.byte	111
+ 188 009f 04       		.byte	4
+ 189 00a0 74       		.byte	116
+ 190 00a1 20       		.byte	32
+ 191 00a2 75       		.byte	117
+ 192 00a3 18       		.byte	24
+ 193 00a4 76       		.byte	118
+ 194 00a5 0A       		.byte	10
+ 195 00a6 C0       		.byte	-64
+ 196 00a7 F4       		.byte	-12
+ 197 00a8 C2       		.byte	-62
+ 198 00a9 F0       		.byte	-16
+ 199 00aa C4       		.byte	-60
+ 200 00ab B8       		.byte	-72
+ 201 00ac CA       		.byte	-54
+ 202 00ad F0       		.byte	-16
+ 203 00ae CC       		.byte	-52
+ 204 00af F0       		.byte	-16
+ 205 00b0 CE       		.byte	-50
+ 206 00b1 F0       		.byte	-16
+ 207 00b2 D0       		.byte	-48
+ 208 00b3 B0       		.byte	-80
+ 209 00b4 D2       		.byte	-46
+ 210 00b5 30       		.byte	48
+ 211 00b6 D6       		.byte	-42
+ 212 00b7 40       		.byte	64
+ 213 00b8 02       		.byte	2
+ 214 00b9 02       		.byte	2
+ 215 00ba 03       		.byte	3
+ 216 00bb 03       		.byte	3
+ 217 00bc 04       		.byte	4
+ 218 00bd 04       		.byte	4
+ 219 00be 05       		.byte	5
+ 220 00bf 0C       		.byte	12
+ 221 00c0 06       		.byte	6
+ 222 00c1 18       		.byte	24
+ 223 00c2 09       		.byte	9
+ 224 00c3 03       		.byte	3
+ 225 00c4 0A       		.byte	10
+ 226 00c5 02       		.byte	2
+ 227 00c6 0C       		.byte	12
+ 228 00c7 10       		.byte	16
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 5
+
+
+ 229 00c8 0E       		.byte	14
+ 230 00c9 04       		.byte	4
+ 231 00ca 0F       		.byte	15
+ 232 00cb 10       		.byte	16
+ 233 00cc 10       		.byte	16
+ 234 00cd 01       		.byte	1
+ 235 00ce 11       		.byte	17
+ 236 00cf 0A       		.byte	10
+ 237 00d0 13       		.byte	19
+ 238 00d1 04       		.byte	4
+ 239 00d2 15       		.byte	21
+ 240 00d3 0C       		.byte	12
+ 241 00d4 16       		.byte	22
+ 242 00d5 02       		.byte	2
+ 243 00d6 18       		.byte	24
+ 244 00d7 02       		.byte	2
+ 245 00d8 1B       		.byte	27
+ 246 00d9 10       		.byte	16
+ 247 00da 1C       		.byte	28
+ 248 00db 08       		.byte	8
+ 249 00dc 1D       		.byte	29
+ 250 00dd 03       		.byte	3
+ 251 00de 1E       		.byte	30
+ 252 00df 04       		.byte	4
+ 253 00e0 20       		.byte	32
+ 254 00e1 02       		.byte	2
+ 255 00e2 23       		.byte	35
+ 256 00e3 03       		.byte	3
+ 257 00e4 24       		.byte	36
+ 258 00e5 1C       		.byte	28
+ 259 00e6 25       		.byte	37
+ 260 00e7 05       		.byte	5
+ 261 00e8 27       		.byte	39
+ 262 00e9 08       		.byte	8
+ 263 00ea 28       		.byte	40
+ 264 00eb 1C       		.byte	28
+ 265 00ec 29       		.byte	41
+ 266 00ed 03       		.byte	3
+ 267 00ee 2F       		.byte	47
+ 268 00ef 03       		.byte	3
+ 269 00f0 30       		.byte	48
+ 270 00f1 02       		.byte	2
+ 271 00f2 31       		.byte	49
+ 272 00f3 0C       		.byte	12
+ 273 00f4 32       		.byte	50
+ 274 00f5 1C       		.byte	28
+ 275 00f6 33       		.byte	51
+ 276 00f7 10       		.byte	16
+ 277 00f8 34       		.byte	52
+ 278 00f9 01       		.byte	1
+ 279 00fa 37       		.byte	55
+ 280 00fb 03       		.byte	3
+ 281 00fc 3E       		.byte	62
+ 282 00fd 11       		.byte	17
+ 283 00fe 3F       		.byte	63
+ 284 00ff 04       		.byte	4
+ 285 0100 54       		.byte	84
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 6
+
+
+ 286 0101 01       		.byte	1
+ 287 0102 58       		.byte	88
+ 288 0103 04       		.byte	4
+ 289 0104 59       		.byte	89
+ 290 0105 04       		.byte	4
+ 291 0106 5B       		.byte	91
+ 292 0107 04       		.byte	4
+ 293 0108 5F       		.byte	95
+ 294 0109 01       		.byte	1
+ 295 010a 85       		.byte	-123
+ 296 010b 31       		.byte	49
+ 297 010c 87       		.byte	-121
+ 298 010d C6       		.byte	-58
+ 299 010e 8B       		.byte	-117
+ 300 010f 53       		.byte	83
+ 301 0110 8D       		.byte	-115
+ 302 0111 30       		.byte	48
+ 303 0112 8F       		.byte	-113
+ 304 0113 40       		.byte	64
+ 305 0114 95       		.byte	-107
+ 306 0115 AC       		.byte	-84
+ 307 0116 97       		.byte	-105
+ 308 0117 43       		.byte	67
+ 309 0118 9B       		.byte	-101
+ 310 0119 8C       		.byte	-116
+ 311 011a 9F       		.byte	-97
+ 312 011b 08       		.byte	8
+ 313 011c A1       		.byte	-95
+ 314 011d 31       		.byte	49
+ 315 011e A3       		.byte	-93
+ 316 011f 4E       		.byte	78
+ 317 0120 B3       		.byte	-77
+ 318 0121 0F       		.byte	15
+ 319 0122 B5       		.byte	-75
+ 320 0123 F0       		.byte	-16
+ 321 0124 BB       		.byte	-69
+ 322 0125 28       		.byte	40
+ 323 0126 C0       		.byte	-64
+ 324 0127 23       		.byte	35
+ 325 0128 C1       		.byte	-63
+ 326 0129 04       		.byte	4
+ 327 012a C5       		.byte	-59
+ 328 012b E0       		.byte	-32
+ 329 012c C6       		.byte	-58
+ 330 012d BC       		.byte	-68
+ 331 012e C8       		.byte	-56
+ 332 012f 0E       		.byte	14
+ 333 0130 C9       		.byte	-55
+ 334 0131 FF       		.byte	-1
+ 335 0132 CA       		.byte	-54
+ 336 0133 FF       		.byte	-1
+ 337 0134 CB       		.byte	-53
+ 338 0135 FF       		.byte	-1
+ 339 0136 CE       		.byte	-50
+ 340 0137 F0       		.byte	-16
+ 341 0138 CF       		.byte	-49
+ 342 0139 44       		.byte	68
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 7
+
+
+ 343 013a D0       		.byte	-48
+ 344 013b 0C       		.byte	12
+ 345 013c D9       		.byte	-39
+ 346 013d 04       		.byte	4
+ 347 013e DA       		.byte	-38
+ 348 013f 04       		.byte	4
+ 349 0140 DF       		.byte	-33
+ 350 0141 01       		.byte	1
+ 351 0142 E6       		.byte	-26
+ 352 0143 C0       		.byte	-64
+ 353 0144 EA       		.byte	-22
+ 354 0145 40       		.byte	64
+ 355 0146 EB       		.byte	-21
+ 356 0147 02       		.byte	2
+ 357 0148 04       		.byte	4
+ 358 0149 60       		.byte	96
+ 359 014a 05       		.byte	5
+ 360 014b 04       		.byte	4
+ 361 014c 06       		.byte	6
+ 362 014d 40       		.byte	64
+ 363 014e 08       		.byte	8
+ 364 014f 08       		.byte	8
+ 365 0150 09       		.byte	9
+ 366 0151 08       		.byte	8
+ 367 0152 0D       		.byte	13
+ 368 0153 14       		.byte	20
+ 369 0154 0E       		.byte	14
+ 370 0155 80       		.byte	-128
+ 371 0156 0F       		.byte	15
+ 372 0157 02       		.byte	2
+ 373 0158 14       		.byte	20
+ 374 0159 84       		.byte	-124
+ 375 015a 15       		.byte	21
+ 376 015b 04       		.byte	4
+ 377 015c 1D       		.byte	29
+ 378 015d 04       		.byte	4
+ 379 015e 1E       		.byte	30
+ 380 015f 48       		.byte	72
+ 381 0160 1F       		.byte	31
+ 382 0161 08       		.byte	8
+ 383 0162 20       		.byte	32
+ 384 0163 04       		.byte	4
+ 385 0164 21       		.byte	33
+ 386 0165 14       		.byte	20
+ 387 0166 22       		.byte	34
+ 388 0167 04       		.byte	4
+ 389 0168 24       		.byte	36
+ 390 0169 40       		.byte	64
+ 391 016a 25       		.byte	37
+ 392 016b 08       		.byte	8
+ 393 016c 26       		.byte	38
+ 394 016d 01       		.byte	1
+ 395 016e 27       		.byte	39
+ 396 016f 02       		.byte	2
+ 397 0170 28       		.byte	40
+ 398 0171 80       		.byte	-128
+ 399 0172 2E       		.byte	46
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 8
+
+
+ 400 0173 80       		.byte	-128
+ 401 0174 2F       		.byte	47
+ 402 0175 68       		.byte	104
+ 403 0176 30       		.byte	48
+ 404 0177 80       		.byte	-128
+ 405 0178 31       		.byte	49
+ 406 0179 20       		.byte	32
+ 407 017a 32       		.byte	50
+ 408 017b 04       		.byte	4
+ 409 017c 34       		.byte	52
+ 410 017d 04       		.byte	4
+ 411 017e 36       		.byte	54
+ 412 017f 91       		.byte	-111
+ 413 0180 37       		.byte	55
+ 414 0181 04       		.byte	4
+ 415 0182 38       		.byte	56
+ 416 0183 24       		.byte	36
+ 417 0184 3A       		.byte	58
+ 418 0185 40       		.byte	64
+ 419 0186 3C       		.byte	60
+ 420 0187 20       		.byte	32
+ 421 0188 3D       		.byte	61
+ 422 0189 06       		.byte	6
+ 423 018a 3F       		.byte	63
+ 424 018b 80       		.byte	-128
+ 425 018c 40       		.byte	64
+ 426 018d 84       		.byte	-124
+ 427 018e 42       		.byte	66
+ 428 018f 20       		.byte	32
+ 429 0190 49       		.byte	73
+ 430 0191 02       		.byte	2
+ 431 0192 4A       		.byte	74
+ 432 0193 40       		.byte	64
+ 433 0194 52       		.byte	82
+ 434 0195 40       		.byte	64
+ 435 0196 53       		.byte	83
+ 436 0197 10       		.byte	16
+ 437 0198 5D       		.byte	93
+ 438 0199 02       		.byte	2
+ 439 019a 5E       		.byte	94
+ 440 019b 48       		.byte	72
+ 441 019c 5F       		.byte	95
+ 442 019d 10       		.byte	16
+ 443 019e 82       		.byte	-126
+ 444 019f 01       		.byte	1
+ 445 01a0 91       		.byte	-111
+ 446 01a1 04       		.byte	4
+ 447 01a2 97       		.byte	-105
+ 448 01a3 80       		.byte	-128
+ 449 01a4 99       		.byte	-103
+ 450 01a5 58       		.byte	88
+ 451 01a6 9A       		.byte	-102
+ 452 01a7 82       		.byte	-126
+ 453 01a8 9B       		.byte	-101
+ 454 01a9 04       		.byte	4
+ 455 01aa A1       		.byte	-95
+ 456 01ab 02       		.byte	2
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 9
+
+
+ 457 01ac A2       		.byte	-94
+ 458 01ad 10       		.byte	16
+ 459 01ae A3       		.byte	-93
+ 460 01af 40       		.byte	64
+ 461 01b0 A4       		.byte	-92
+ 462 01b1 10       		.byte	16
+ 463 01b2 A6       		.byte	-90
+ 464 01b3 A1       		.byte	-95
+ 465 01b4 A7       		.byte	-89
+ 466 01b5 28       		.byte	40
+ 467 01b6 C0       		.byte	-64
+ 468 01b7 F0       		.byte	-16
+ 469 01b8 C2       		.byte	-62
+ 470 01b9 F0       		.byte	-16
+ 471 01ba C4       		.byte	-60
+ 472 01bb 70       		.byte	112
+ 473 01bc CA       		.byte	-54
+ 474 01bd F1       		.byte	-15
+ 475 01be CC       		.byte	-52
+ 476 01bf FE       		.byte	-2
+ 477 01c0 CE       		.byte	-50
+ 478 01c1 FE       		.byte	-2
+ 479 01c2 D0       		.byte	-48
+ 480 01c3 07       		.byte	7
+ 481 01c4 D6       		.byte	-42
+ 482 01c5 F0       		.byte	-16
+ 483 01c6 04       		.byte	4
+ 484 01c7 10       		.byte	16
+ 485 01c8 05       		.byte	5
+ 486 01c9 07       		.byte	7
+ 487 01ca 06       		.byte	6
+ 488 01cb AC       		.byte	-84
+ 489 01cc 08       		.byte	8
+ 490 01cd 0C       		.byte	12
+ 491 01ce 09       		.byte	9
+ 492 01cf 08       		.byte	8
+ 493 01d0 0A       		.byte	10
+ 494 01d1 71       		.byte	113
+ 495 01d2 0B       		.byte	11
+ 496 01d3 01       		.byte	1
+ 497 01d4 0E       		.byte	14
+ 498 01d5 03       		.byte	3
+ 499 01d6 14       		.byte	20
+ 500 01d7 14       		.byte	20
+ 501 01d8 15       		.byte	21
+ 502 01d9 02       		.byte	2
+ 503 01da 17       		.byte	23
+ 504 01db 04       		.byte	4
+ 505 01dc 18       		.byte	24
+ 506 01dd 09       		.byte	9
+ 507 01de 1A       		.byte	26
+ 508 01df D0       		.byte	-48
+ 509 01e0 20       		.byte	32
+ 510 01e1 10       		.byte	16
+ 511 01e2 22       		.byte	34
+ 512 01e3 40       		.byte	64
+ 513 01e4 26       		.byte	38
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 10
+
+
+ 514 01e5 20       		.byte	32
+ 515 01e6 28       		.byte	40
+ 516 01e7 DC       		.byte	-36
+ 517 01e8 29       		.byte	41
+ 518 01e9 07       		.byte	7
+ 519 01ea 2A       		.byte	42
+ 520 01eb 22       		.byte	34
+ 521 01ec 30       		.byte	48
+ 522 01ed 1F       		.byte	31
+ 523 01ee 31       		.byte	49
+ 524 01ef 03       		.byte	3
+ 525 01f0 34       		.byte	52
+ 526 01f1 E0       		.byte	-32
+ 527 01f2 35       		.byte	53
+ 528 01f3 0C       		.byte	12
+ 529 01f4 39       		.byte	57
+ 530 01f5 22       		.byte	34
+ 531 01f6 3A       		.byte	58
+ 532 01f7 20       		.byte	32
+ 533 01f8 3B       		.byte	59
+ 534 01f9 08       		.byte	8
+ 535 01fa 3F       		.byte	63
+ 536 01fb 01       		.byte	1
+ 537 01fc 40       		.byte	64
+ 538 01fd 04       		.byte	4
+ 539 01fe 46       		.byte	70
+ 540 01ff 04       		.byte	4
+ 541 0200 49       		.byte	73
+ 542 0201 FF       		.byte	-1
+ 543 0202 4A       		.byte	74
+ 544 0203 07       		.byte	7
+ 545 0204 4B       		.byte	75
+ 546 0205 FF       		.byte	-1
+ 547 0206 4C       		.byte	76
+ 548 0207 40       		.byte	64
+ 549 0208 4D       		.byte	77
+ 550 0209 20       		.byte	32
+ 551 020a 4E       		.byte	78
+ 552 020b F0       		.byte	-16
+ 553 020c 4F       		.byte	79
+ 554 020d 05       		.byte	5
+ 555 020e 50       		.byte	80
+ 556 020f 08       		.byte	8
+ 557 0210 58       		.byte	88
+ 558 0211 04       		.byte	4
+ 559 0212 59       		.byte	89
+ 560 0213 04       		.byte	4
+ 561 0214 5A       		.byte	90
+ 562 0215 04       		.byte	4
+ 563 0216 5F       		.byte	95
+ 564 0217 01       		.byte	1
+ 565 0218 60       		.byte	96
+ 566 0219 40       		.byte	64
+ 567 021a 61       		.byte	97
+ 568 021b A8       		.byte	-88
+ 569 021c 62       		.byte	98
+ 570 021d 40       		.byte	64
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 11
+
+
+ 571 021e 63       		.byte	99
+ 572 021f 20       		.byte	32
+ 573 0220 80       		.byte	-128
+ 574 0221 06       		.byte	6
+ 575 0222 82       		.byte	-126
+ 576 0223 01       		.byte	1
+ 577 0224 83       		.byte	-125
+ 578 0225 0C       		.byte	12
+ 579 0226 84       		.byte	-124
+ 580 0227 06       		.byte	6
+ 581 0228 85       		.byte	-123
+ 582 0229 20       		.byte	32
+ 583 022a 88       		.byte	-120
+ 584 022b 02       		.byte	2
+ 585 022c 89       		.byte	-119
+ 586 022d 04       		.byte	4
+ 587 022e 8B       		.byte	-117
+ 588 022f 01       		.byte	1
+ 589 0230 8C       		.byte	-116
+ 590 0231 04       		.byte	4
+ 591 0232 8D       		.byte	-115
+ 592 0233 30       		.byte	48
+ 593 0234 8F       		.byte	-113
+ 594 0235 0C       		.byte	12
+ 595 0236 91       		.byte	-111
+ 596 0237 08       		.byte	8
+ 597 0238 92       		.byte	-110
+ 598 0239 01       		.byte	1
+ 599 023a 95       		.byte	-107
+ 600 023b 10       		.byte	16
+ 601 023c 99       		.byte	-103
+ 602 023d 3C       		.byte	60
+ 603 023e 9C       		.byte	-100
+ 604 023f 06       		.byte	6
+ 605 0240 9D       		.byte	-99
+ 606 0241 0C       		.byte	12
+ 607 0242 9E       		.byte	-98
+ 608 0243 01       		.byte	1
+ 609 0244 9F       		.byte	-97
+ 610 0245 30       		.byte	48
+ 611 0246 A0       		.byte	-96
+ 612 0247 01       		.byte	1
+ 613 0248 A1       		.byte	-95
+ 614 0249 3C       		.byte	60
+ 615 024a A2       		.byte	-94
+ 616 024b 06       		.byte	6
+ 617 024c A5       		.byte	-91
+ 618 024d 30       		.byte	48
+ 619 024e A8       		.byte	-88
+ 620 024f 07       		.byte	7
+ 621 0250 A9       		.byte	-87
+ 622 0251 0C       		.byte	12
+ 623 0252 AD       		.byte	-83
+ 624 0253 02       		.byte	2
+ 625 0254 B3       		.byte	-77
+ 626 0255 02       		.byte	2
+ 627 0256 B5       		.byte	-75
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 12
+
+
+ 628 0257 01       		.byte	1
+ 629 0258 B6       		.byte	-74
+ 630 0259 07       		.byte	7
+ 631 025a B7       		.byte	-73
+ 632 025b 3C       		.byte	60
+ 633 025c BA       		.byte	-70
+ 634 025d 80       		.byte	-128
+ 635 025e BB       		.byte	-69
+ 636 025f 80       		.byte	-128
+ 637 0260 BF       		.byte	-65
+ 638 0261 04       		.byte	4
+ 639 0262 D4       		.byte	-44
+ 640 0263 18       		.byte	24
+ 641 0264 D6       		.byte	-42
+ 642 0265 04       		.byte	4
+ 643 0266 D8       		.byte	-40
+ 644 0267 04       		.byte	4
+ 645 0268 D9       		.byte	-39
+ 646 0269 04       		.byte	4
+ 647 026a DB       		.byte	-37
+ 648 026b 04       		.byte	4
+ 649 026c DF       		.byte	-33
+ 650 026d 01       		.byte	1
+ 651 026e 00       		.byte	0
+ 652 026f 04       		.byte	4
+ 653 0270 01       		.byte	1
+ 654 0271 20       		.byte	32
+ 655 0272 03       		.byte	3
+ 656 0273 02       		.byte	2
+ 657 0274 05       		.byte	5
+ 658 0275 18       		.byte	24
+ 659 0276 06       		.byte	6
+ 660 0277 82       		.byte	-126
+ 661 0278 07       		.byte	7
+ 662 0279 08       		.byte	8
+ 663 027a 09       		.byte	9
+ 664 027b 20       		.byte	32
+ 665 027c 0B       		.byte	11
+ 666 027d 20       		.byte	32
+ 667 027e 0D       		.byte	13
+ 668 027f 02       		.byte	2
+ 669 0280 0E       		.byte	14
+ 670 0281 01       		.byte	1
+ 671 0282 10       		.byte	16
+ 672 0283 A0       		.byte	-96
+ 673 0284 12       		.byte	18
+ 674 0285 08       		.byte	8
+ 675 0286 17       		.byte	23
+ 676 0287 21       		.byte	33
+ 677 0288 19       		.byte	25
+ 678 0289 20       		.byte	32
+ 679 028a 1B       		.byte	27
+ 680 028b 02       		.byte	2
+ 681 028c 1E       		.byte	30
+ 682 028d 01       		.byte	1
+ 683 028e 1F       		.byte	31
+ 684 028f 40       		.byte	64
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 13
+
+
+ 685 0290 20       		.byte	32
+ 686 0291 60       		.byte	96
+ 687 0292 21       		.byte	33
+ 688 0293 20       		.byte	32
+ 689 0294 23       		.byte	35
+ 690 0295 20       		.byte	32
+ 691 0296 26       		.byte	38
+ 692 0297 A4       		.byte	-92
+ 693 0298 27       		.byte	39
+ 694 0299 01       		.byte	1
+ 695 029a 29       		.byte	41
+ 696 029b 20       		.byte	32
+ 697 029c 2D       		.byte	45
+ 698 029d 08       		.byte	8
+ 699 029e 2E       		.byte	46
+ 700 029f 01       		.byte	1
+ 701 02a0 2F       		.byte	47
+ 702 02a1 0A       		.byte	10
+ 703 02a2 32       		.byte	50
+ 704 02a3 0C       		.byte	12
+ 705 02a4 36       		.byte	54
+ 706 02a5 81       		.byte	-127
+ 707 02a6 37       		.byte	55
+ 708 02a7 28       		.byte	40
+ 709 02a8 38       		.byte	56
+ 710 02a9 24       		.byte	36
+ 711 02aa 3A       		.byte	58
+ 712 02ab 20       		.byte	32
+ 713 02ac 3D       		.byte	61
+ 714 02ad 12       		.byte	18
+ 715 02ae 3E       		.byte	62
+ 716 02af 80       		.byte	-128
+ 717 02b0 3F       		.byte	63
+ 718 02b1 08       		.byte	8
+ 719 02b2 40       		.byte	64
+ 720 02b3 40       		.byte	64
+ 721 02b4 45       		.byte	69
+ 722 02b5 03       		.byte	3
+ 723 02b6 50       		.byte	80
+ 724 02b7 B0       		.byte	-80
+ 725 02b8 5F       		.byte	95
+ 726 02b9 02       		.byte	2
+ 727 02ba 64       		.byte	100
+ 728 02bb 08       		.byte	8
+ 729 02bc 65       		.byte	101
+ 730 02bd 40       		.byte	64
+ 731 02be 66       		.byte	102
+ 732 02bf 01       		.byte	1
+ 733 02c0 90       		.byte	-112
+ 734 02c1 04       		.byte	4
+ 735 02c2 91       		.byte	-111
+ 736 02c3 10       		.byte	16
+ 737 02c4 92       		.byte	-110
+ 738 02c5 08       		.byte	8
+ 739 02c6 93       		.byte	-109
+ 740 02c7 20       		.byte	32
+ 741 02c8 94       		.byte	-108
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 14
+
+
+ 742 02c9 20       		.byte	32
+ 743 02ca 97       		.byte	-105
+ 744 02cb 80       		.byte	-128
+ 745 02cc 98       		.byte	-104
+ 746 02cd 08       		.byte	8
+ 747 02ce 99       		.byte	-103
+ 748 02cf 58       		.byte	88
+ 749 02d0 9A       		.byte	-102
+ 750 02d1 82       		.byte	-126
+ 751 02d2 9B       		.byte	-101
+ 752 02d3 02       		.byte	2
+ 753 02d4 9C       		.byte	-100
+ 754 02d5 80       		.byte	-128
+ 755 02d6 9E       		.byte	-98
+ 756 02d7 21       		.byte	33
+ 757 02d8 A1       		.byte	-95
+ 758 02d9 02       		.byte	2
+ 759 02da A2       		.byte	-94
+ 760 02db 01       		.byte	1
+ 761 02dc A3       		.byte	-93
+ 762 02dd 08       		.byte	8
+ 763 02de A4       		.byte	-92
+ 764 02df 90       		.byte	-112
+ 765 02e0 A5       		.byte	-91
+ 766 02e1 21       		.byte	33
+ 767 02e2 A6       		.byte	-90
+ 768 02e3 A0       		.byte	-96
+ 769 02e4 AD       		.byte	-83
+ 770 02e5 10       		.byte	16
+ 771 02e6 AE       		.byte	-82
+ 772 02e7 40       		.byte	64
+ 773 02e8 AF       		.byte	-81
+ 774 02e9 31       		.byte	49
+ 775 02ea C0       		.byte	-64
+ 776 02eb F7       		.byte	-9
+ 777 02ec C2       		.byte	-62
+ 778 02ed 96       		.byte	-106
+ 779 02ee C4       		.byte	-60
+ 780 02ef 5E       		.byte	94
+ 781 02f0 CA       		.byte	-54
+ 782 02f1 F4       		.byte	-12
+ 783 02f2 CC       		.byte	-52
+ 784 02f3 F2       		.byte	-14
+ 785 02f4 CE       		.byte	-50
+ 786 02f5 F6       		.byte	-10
+ 787 02f6 D0       		.byte	-48
+ 788 02f7 01       		.byte	1
+ 789 02f8 D6       		.byte	-42
+ 790 02f9 80       		.byte	-128
+ 791 02fa D8       		.byte	-40
+ 792 02fb B0       		.byte	-80
+ 793 02fc A8       		.byte	-88
+ 794 02fd 80       		.byte	-128
+ 795 02fe A9       		.byte	-87
+ 796 02ff 20       		.byte	32
+ 797 0300 AA       		.byte	-86
+ 798 0301 02       		.byte	2
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 15
+
+
+ 799 0302 AB       		.byte	-85
+ 800 0303 04       		.byte	4
+ 801 0304 B6       		.byte	-74
+ 802 0305 04       		.byte	4
+ 803 0306 EA       		.byte	-22
+ 804 0307 40       		.byte	64
+ 805 0308 33       		.byte	51
+ 806 0309 10       		.byte	16
+ 807 030a 37       		.byte	55
+ 808 030b 10       		.byte	16
+ 809 030c CC       		.byte	-52
+ 810 030d 30       		.byte	48
+ 811 030e 03       		.byte	3
+ 812 030f 80       		.byte	-128
+ 813 0310 83       		.byte	-125
+ 814 0311 10       		.byte	16
+ 815 0312 9F       		.byte	-97
+ 816 0313 10       		.byte	16
+ 817 0314 C0       		.byte	-64
+ 818 0315 10       		.byte	16
+ 819 0316 E2       		.byte	-30
+ 820 0317 20       		.byte	32
+ 821 0318 57       		.byte	87
+ 822 0319 04       		.byte	4
+ 823 031a AF       		.byte	-81
+ 824 031b 80       		.byte	-128
+ 825 031c D4       		.byte	-44
+ 826 031d 40       		.byte	64
+ 827 031e EC       		.byte	-20
+ 828 031f 10       		.byte	16
+ 829 0320 B7       		.byte	-73
+ 830 0321 04       		.byte	4
+ 831 0322 00       		.byte	0
+ 832 0323 01       		.byte	1
+ 833 0324 08       		.byte	8
+ 834 0325 01       		.byte	1
+ 835 0326 0A       		.byte	10
+ 836 0327 01       		.byte	1
+ 837 0328 00       		.byte	0
+ 838 0329 0F       		.byte	15
+ 839 032a 00       		.byte	0
+ 840 032b 00       		.byte	0
+ 841 032c 07       		.byte	7
+ 842 032d 10       		.byte	16
+ 843 032e 10       		.byte	16
+ 844 032f 00       		.byte	0
+ 845 0330 06       		.byte	6
+ 846 0331 08       		.byte	8
+ 847 0332 00       		.byte	0
+ 848 0333 00       		.byte	0
+ 849 0334 08       		.byte	8
+ 850 0335 3F       		.byte	63
+ 851 0336 00       		.byte	0
+ 852 0337 00       		.byte	0
+ 853 0338 04       		.byte	4
+ 854 0339 3C       		.byte	60
+ 855 033a 00       		.byte	0
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 16
+
+
+ 856 033b 02       		.byte	2
+ 857 033c 00       		.byte	0
+ 858 033d 00       		.byte	0
+ 859 033e 01       		.byte	1
+ 860 033f 80       		.byte	-128
+ 861 0340 17       		.byte	23
+ 862 0341 18       		.byte	24
+ 863 0342 00       		.byte	0
+ 864 0343 00       		.byte	0
+ 865 0344 02       		.byte	2
+ 866 0345 00       		.byte	0
+ 867 0346 00       		.byte	0
+ 868 0347 04       		.byte	4
+ 869 0348 06       		.byte	6
+ 870 0349 27       		.byte	39
+ 871 034a 11       		.byte	17
+ 872 034b 18       		.byte	24
+ 873 034c 11       		.byte	17
+ 874 034d 3C       		.byte	60
+ 875 034e 06       		.byte	6
+ 876 034f 01       		.byte	1
+ 877 0350 08       		.byte	8
+ 878 0351 04       		.byte	4
+ 879 0352 00       		.byte	0
+ 880 0353 80       		.byte	-128
+ 881 0354 00       		.byte	0
+ 882 0355 00       		.byte	0
+ 883 0356 00       		.byte	0
+ 884 0357 40       		.byte	64
+ 885 0358 08       		.byte	8
+ 886 0359 00       		.byte	0
+ 887 035a 00       		.byte	0
+ 888 035b 03       		.byte	3
+ 889 035c 08       		.byte	8
+ 890 035d C0       		.byte	-64
+ 891 035e 10       		.byte	16
+ 892 035f 00       		.byte	0
+ 893 0360 07       		.byte	7
+ 894 0361 20       		.byte	32
+ 895 0362 00       		.byte	0
+ 896 0363 1F       		.byte	31
+ 897 0364 08       		.byte	8
+ 898 0365 00       		.byte	0
+ 899 0366 00       		.byte	0
+ 900 0367 80       		.byte	-128
+ 901 0368 00       		.byte	0
+ 902 0369 00       		.byte	0
+ 903 036a 00       		.byte	0
+ 904 036b 11       		.byte	17
+ 905 036c 54       		.byte	84
+ 906 036d 06       		.byte	6
+ 907 036e 02       		.byte	2
+ 908 036f 00       		.byte	0
+ 909 0370 01       		.byte	1
+ 910 0371 C0       		.byte	-64
+ 911 0372 0E       		.byte	14
+ 912 0373 00       		.byte	0
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 17
+
+
+ 913 0374 06       		.byte	6
+ 914 0375 FF       		.byte	-1
+ 915 0376 FF       		.byte	-1
+ 916 0377 FF       		.byte	-1
+ 917 0378 62       		.byte	98
+ 918 0379 A0       		.byte	-96
+ 919 037a F0       		.byte	-16
+ 920 037b 41       		.byte	65
+ 921 037c 0C       		.byte	12
+ 922 037d 00       		.byte	0
+ 923 037e 00       		.byte	0
+ 924 037f 00       		.byte	0
+ 925 0380 00       		.byte	0
+ 926 0381 00       		.byte	0
+ 927 0382 02       		.byte	2
+ 928 0383 12       		.byte	18
+ 929 0384 04       		.byte	4
+ 930 0385 04       		.byte	4
+ 931 0386 04       		.byte	4
+ 932 0387 04       		.byte	4
+ 933 0388 00       		.byte	0
+ 934 0389 00       		.byte	0
+ 935 038a 00       		.byte	0
+ 936 038b 01       		.byte	1
+ 937 038c 00       		.byte	0
+ 938 038d 00       		.byte	0
+ 939 038e 00       		.byte	0
+ 940 038f 00       		.byte	0
+ 941 0390 00       		.byte	0
+ 942 0391 00       		.byte	0
+ 943 0392 40       		.byte	64
+ 944 0393 02       		.byte	2
+ 945 0394 00       		.byte	0
+ 946 0395 10       		.byte	16
+ 947 0396 30       		.byte	48
+ 948 0397 10       		.byte	16
+ 949 0398 00       		.byte	0
+ 950 0399 10       		.byte	16
+ 951 039a 10       		.byte	16
+ 952 039b 12       		.byte	18
+ 953 039c 00       		.byte	0
+ 954 039d 00       		.byte	0
+ 955 039e 00       		.byte	0
+ 956 039f 00       		.byte	0
+ 957 03a0 00       		.byte	0
+ 958 03a1 00       		.byte	0
+ 959 03a2 00       		.byte	0
+ 960 03a3 00       		.byte	0
+ 961 03a4 00       		.byte	0
+ 962 03a5 00       		.byte	0
+ 963 03a6 00       		.byte	0
+ 964 03a7 00       		.byte	0
+ 965 03a8 00       		.byte	0
+ 966 03a9 00       		.byte	0
+ 967 03aa 00       		.byte	0
+ 968 03ab 00       		.byte	0
+ 969 03ac 01       		.byte	1
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 18
+
+
+ 970 03ad 00       		.byte	0
+ 971 03ae 00       		.byte	0
+ 972 03af 00       		.byte	0
+ 973 03b0 00       		.byte	0
+ 974 03b1 00       		.byte	0
+ 975 03b2 00       		.byte	0
+ 976 03b3 00       		.byte	0
+ 977 03b4 08       		.byte	8
+ 978 03b5 00       		.byte	0
+ 979 03b6 00       		.byte	0
+ 980 03b7 08       		.byte	8
+ 981 03b8 08       		.byte	8
+ 982 03b9 00       		.byte	0
+ 983 03ba 08       		.byte	8
+ 984 03bb 00       		.byte	0
+ 985 03bc 00       		.byte	0
+ 986 03bd 00       		.byte	0
+ 987 03be 00       		.byte	0
+ 988 03bf 00       		.byte	0
+ 989 03c0 00       		.byte	0
+ 990 03c1 0B       		.byte	11
+ 991 03c2 0B       		.byte	11
+ 992 03c3 00       		.byte	0
+ 993 03c4 00       		.byte	0
+ 994 03c5 00       		.byte	0
+ 995 03c6 00       		.byte	0
+ 996 03c7 00       		.byte	0
+ 997 03c8 00       		.byte	0
+ 998 03c9 02       		.byte	2
+ 999 03ca 02       		.byte	2
+ 1000 03cb 00       		.byte	0
+ 1001 03cc 00       		.byte	0
+ 1002 03cd 00       		.byte	0
+ 1003 03ce 00       		.byte	0
+ 1004 03cf 00       		.byte	0
+ 1005 03d0 01       		.byte	1
+ 1006 03d1 03       		.byte	3
+ 1007 03d2 02       		.byte	2
+ 1008 03d3 00       		.byte	0
+ 1009 03d4 00       		.byte	0
+ 1010 03d5 00       		.byte	0
+ 1011 03d6 00       		.byte	0
+ 1012 03d7 00       		.byte	0
+ 1013              		.section	.cywolatch,"a",%progbits
+ 1014              		.align	2
+ 1015              		.type	cy_meta_wonvl, %object
+ 1016              		.size	cy_meta_wonvl, 4
+ 1017              	cy_meta_wonvl:
+ 1018 0000 BC       		.byte	-68
+ 1019 0001 90       		.byte	-112
+ 1020 0002 AC       		.byte	-84
+ 1021 0003 AF       		.byte	-81
+ 1022              		.section	.cycustnvl,"a",%progbits
+ 1023              		.align	2
+ 1024              		.type	cy_meta_custnvl, %object
+ 1025              		.size	cy_meta_custnvl, 4
+ 1026              	cy_meta_custnvl:
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 19
+
+
+ 1027 0000 00       		.byte	0
+ 1028 0001 00       		.byte	0
+ 1029 0002 40       		.byte	64
+ 1030 0003 05       		.byte	5
+ 1031              		.section	.cymeta,"a",%progbits
+ 1032              		.align	2
+ 1033              		.type	cy_metadata, %object
+ 1034              		.size	cy_metadata, 12
+ 1035              	cy_metadata:
+ 1036 0000 00       		.byte	0
+ 1037 0001 01       		.byte	1
+ 1038 0002 2E       		.byte	46
+ 1039 0003 16       		.byte	22
+ 1040 0004 10       		.byte	16
+ 1041 0005 69       		.byte	105
+ 1042 0006 00       		.byte	0
+ 1043 0007 01       		.byte	1
+ 1044 0008 00       		.byte	0
+ 1045 0009 00       		.byte	0
+ 1046 000a 00       		.byte	0
+ 1047 000b 00       		.byte	0
+ 1048              		.section	.cyflashprotect,"a",%progbits
+ 1049              		.align	2
+ 1050              		.type	cy_meta_flashprotect, %object
+ 1051              		.size	cy_meta_flashprotect, 256
+ 1052              	cy_meta_flashprotect:
+ 1053 0000 00000000 		.space	256
+ 1053      00000000 
+ 1053      00000000 
+ 1053      00000000 
+ 1053      00000000 
+ 1054              		.text
+ 1055              	.Letext0:
+ 1056              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1057              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1058              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 1059              		.section	.debug_info,"",%progbits
+ 1060              	.Ldebug_info0:
+ 1061 0000 31010000 		.4byte	0x131
+ 1062 0004 0400     		.2byte	0x4
+ 1063 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1064 000a 04       		.byte	0x4
+ 1065 000b 01       		.uleb128 0x1
+ 1066 000c 24000000 		.4byte	.LASF17
+ 1067 0010 0C       		.byte	0xc
+ 1068 0011 DD010000 		.4byte	.LASF18
+ 1069 0015 72010000 		.4byte	.LASF19
+ 1070 0019 00000000 		.4byte	.Ldebug_line0
+ 1071 001d 02       		.uleb128 0x2
+ 1072 001e 01       		.byte	0x1
+ 1073 001f 06       		.byte	0x6
+ 1074 0020 D1010000 		.4byte	.LASF0
+ 1075 0024 03       		.uleb128 0x3
+ 1076 0025 00000000 		.4byte	.LASF9
+ 1077 0029 01       		.byte	0x1
+ 1078 002a 1D       		.byte	0x1d
+ 1079 002b 2F000000 		.4byte	0x2f
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 20
+
+
+ 1080 002f 02       		.uleb128 0x2
+ 1081 0030 01       		.byte	0x1
+ 1082 0031 08       		.byte	0x8
+ 1083 0032 16000000 		.4byte	.LASF1
+ 1084 0036 02       		.uleb128 0x2
+ 1085 0037 02       		.byte	0x2
+ 1086 0038 05       		.byte	0x5
+ 1087 0039 5F010000 		.4byte	.LASF2
+ 1088 003d 02       		.uleb128 0x2
+ 1089 003e 02       		.byte	0x2
+ 1090 003f 07       		.byte	0x7
+ 1091 0040 C4000000 		.4byte	.LASF3
+ 1092 0044 02       		.uleb128 0x2
+ 1093 0045 04       		.byte	0x4
+ 1094 0046 05       		.byte	0x5
+ 1095 0047 69010000 		.4byte	.LASF4
+ 1096 004b 02       		.uleb128 0x2
+ 1097 004c 04       		.byte	0x4
+ 1098 004d 07       		.byte	0x7
+ 1099 004e B2000000 		.4byte	.LASF5
+ 1100 0052 02       		.uleb128 0x2
+ 1101 0053 08       		.byte	0x8
+ 1102 0054 05       		.byte	0x5
+ 1103 0055 51010000 		.4byte	.LASF6
+ 1104 0059 02       		.uleb128 0x2
+ 1105 005a 08       		.byte	0x8
+ 1106 005b 07       		.byte	0x7
+ 1107 005c 06010000 		.4byte	.LASF7
+ 1108 0060 04       		.uleb128 0x4
+ 1109 0061 04       		.byte	0x4
+ 1110 0062 05       		.byte	0x5
+ 1111 0063 696E7400 		.ascii	"int\000"
+ 1112 0067 02       		.uleb128 0x2
+ 1113 0068 04       		.byte	0x4
+ 1114 0069 07       		.byte	0x7
+ 1115 006a F9000000 		.4byte	.LASF8
+ 1116 006e 03       		.uleb128 0x3
+ 1117 006f 1D010000 		.4byte	.LASF10
+ 1118 0073 02       		.byte	0x2
+ 1119 0074 18       		.byte	0x18
+ 1120 0075 24000000 		.4byte	0x24
+ 1121 0079 05       		.uleb128 0x5
+ 1122 007a 91000000 		.4byte	0x91
+ 1123 007e 8A000000 		.4byte	0x8a
+ 1124 0082 06       		.uleb128 0x6
+ 1125 0083 8A000000 		.4byte	0x8a
+ 1126 0087 D703     		.2byte	0x3d7
+ 1127 0089 00       		.byte	0
+ 1128 008a 02       		.uleb128 0x2
+ 1129 008b 04       		.byte	0x4
+ 1130 008c 07       		.byte	0x7
+ 1131 008d 48010000 		.4byte	.LASF11
+ 1132 0091 07       		.uleb128 0x7
+ 1133 0092 6E000000 		.4byte	0x6e
+ 1134 0096 08       		.uleb128 0x8
+ 1135 0097 E7000000 		.4byte	.LASF12
+ 1136 009b 03       		.byte	0x3
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 21
+
+
+ 1137 009c 1F       		.byte	0x1f
+ 1138 009d A7000000 		.4byte	0xa7
+ 1139 00a1 05       		.uleb128 0x5
+ 1140 00a2 03       		.byte	0x3
+ 1141 00a3 00000000 		.4byte	cy_meta_configecc
+ 1142 00a7 07       		.uleb128 0x7
+ 1143 00a8 79000000 		.4byte	0x79
+ 1144 00ac 05       		.uleb128 0x5
+ 1145 00ad 91000000 		.4byte	0x91
+ 1146 00b1 BC000000 		.4byte	0xbc
+ 1147 00b5 09       		.uleb128 0x9
+ 1148 00b6 8A000000 		.4byte	0x8a
+ 1149 00ba 03       		.byte	0x3
+ 1150 00bb 00       		.byte	0
+ 1151 00bc 08       		.uleb128 0x8
+ 1152 00bd D7000000 		.4byte	.LASF13
+ 1153 00c1 03       		.byte	0x3
+ 1154 00c2 A7       		.byte	0xa7
+ 1155 00c3 CD000000 		.4byte	0xcd
+ 1156 00c7 05       		.uleb128 0x5
+ 1157 00c8 03       		.byte	0x3
+ 1158 00c9 00000000 		.4byte	cy_meta_custnvl
+ 1159 00cd 07       		.uleb128 0x7
+ 1160 00ce AC000000 		.4byte	0xac
+ 1161 00d2 08       		.uleb128 0x8
+ 1162 00d3 3A010000 		.4byte	.LASF14
+ 1163 00d7 03       		.byte	0x3
+ 1164 00d8 B5       		.byte	0xb5
+ 1165 00d9 E3000000 		.4byte	0xe3
+ 1166 00dd 05       		.uleb128 0x5
+ 1167 00de 03       		.byte	0x3
+ 1168 00df 00000000 		.4byte	cy_meta_wonvl
+ 1169 00e3 07       		.uleb128 0x7
+ 1170 00e4 AC000000 		.4byte	0xac
+ 1171 00e8 05       		.uleb128 0x5
+ 1172 00e9 91000000 		.4byte	0x91
+ 1173 00ed F8000000 		.4byte	0xf8
+ 1174 00f1 09       		.uleb128 0x9
+ 1175 00f2 8A000000 		.4byte	0x8a
+ 1176 00f6 FF       		.byte	0xff
+ 1177 00f7 00       		.byte	0
+ 1178 00f8 08       		.uleb128 0x8
+ 1179 00f9 25010000 		.4byte	.LASF15
+ 1180 00fd 03       		.byte	0x3
+ 1181 00fe C3       		.byte	0xc3
+ 1182 00ff 09010000 		.4byte	0x109
+ 1183 0103 05       		.uleb128 0x5
+ 1184 0104 03       		.byte	0x3
+ 1185 0105 00000000 		.4byte	cy_meta_flashprotect
+ 1186 0109 07       		.uleb128 0x7
+ 1187 010a E8000000 		.4byte	0xe8
+ 1188 010e 05       		.uleb128 0x5
+ 1189 010f 91000000 		.4byte	0x91
+ 1190 0113 1E010000 		.4byte	0x11e
+ 1191 0117 09       		.uleb128 0x9
+ 1192 0118 8A000000 		.4byte	0x8a
+ 1193 011c 0B       		.byte	0xb
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 22
+
+
+ 1194 011d 00       		.byte	0
+ 1195 011e 08       		.uleb128 0x8
+ 1196 011f 0A000000 		.4byte	.LASF16
+ 1197 0123 03       		.byte	0x3
+ 1198 0124 F0       		.byte	0xf0
+ 1199 0125 2F010000 		.4byte	0x12f
+ 1200 0129 05       		.uleb128 0x5
+ 1201 012a 03       		.byte	0x3
+ 1202 012b 00000000 		.4byte	cy_metadata
+ 1203 012f 07       		.uleb128 0x7
+ 1204 0130 0E010000 		.4byte	0x10e
+ 1205 0134 00       		.byte	0
+ 1206              		.section	.debug_abbrev,"",%progbits
+ 1207              	.Ldebug_abbrev0:
+ 1208 0000 01       		.uleb128 0x1
+ 1209 0001 11       		.uleb128 0x11
+ 1210 0002 01       		.byte	0x1
+ 1211 0003 25       		.uleb128 0x25
+ 1212 0004 0E       		.uleb128 0xe
+ 1213 0005 13       		.uleb128 0x13
+ 1214 0006 0B       		.uleb128 0xb
+ 1215 0007 03       		.uleb128 0x3
+ 1216 0008 0E       		.uleb128 0xe
+ 1217 0009 1B       		.uleb128 0x1b
+ 1218 000a 0E       		.uleb128 0xe
+ 1219 000b 10       		.uleb128 0x10
+ 1220 000c 17       		.uleb128 0x17
+ 1221 000d 00       		.byte	0
+ 1222 000e 00       		.byte	0
+ 1223 000f 02       		.uleb128 0x2
+ 1224 0010 24       		.uleb128 0x24
+ 1225 0011 00       		.byte	0
+ 1226 0012 0B       		.uleb128 0xb
+ 1227 0013 0B       		.uleb128 0xb
+ 1228 0014 3E       		.uleb128 0x3e
+ 1229 0015 0B       		.uleb128 0xb
+ 1230 0016 03       		.uleb128 0x3
+ 1231 0017 0E       		.uleb128 0xe
+ 1232 0018 00       		.byte	0
+ 1233 0019 00       		.byte	0
+ 1234 001a 03       		.uleb128 0x3
+ 1235 001b 16       		.uleb128 0x16
+ 1236 001c 00       		.byte	0
+ 1237 001d 03       		.uleb128 0x3
+ 1238 001e 0E       		.uleb128 0xe
+ 1239 001f 3A       		.uleb128 0x3a
+ 1240 0020 0B       		.uleb128 0xb
+ 1241 0021 3B       		.uleb128 0x3b
+ 1242 0022 0B       		.uleb128 0xb
+ 1243 0023 49       		.uleb128 0x49
+ 1244 0024 13       		.uleb128 0x13
+ 1245 0025 00       		.byte	0
+ 1246 0026 00       		.byte	0
+ 1247 0027 04       		.uleb128 0x4
+ 1248 0028 24       		.uleb128 0x24
+ 1249 0029 00       		.byte	0
+ 1250 002a 0B       		.uleb128 0xb
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 23
+
+
+ 1251 002b 0B       		.uleb128 0xb
+ 1252 002c 3E       		.uleb128 0x3e
+ 1253 002d 0B       		.uleb128 0xb
+ 1254 002e 03       		.uleb128 0x3
+ 1255 002f 08       		.uleb128 0x8
+ 1256 0030 00       		.byte	0
+ 1257 0031 00       		.byte	0
+ 1258 0032 05       		.uleb128 0x5
+ 1259 0033 01       		.uleb128 0x1
+ 1260 0034 01       		.byte	0x1
+ 1261 0035 49       		.uleb128 0x49
+ 1262 0036 13       		.uleb128 0x13
+ 1263 0037 01       		.uleb128 0x1
+ 1264 0038 13       		.uleb128 0x13
+ 1265 0039 00       		.byte	0
+ 1266 003a 00       		.byte	0
+ 1267 003b 06       		.uleb128 0x6
+ 1268 003c 21       		.uleb128 0x21
+ 1269 003d 00       		.byte	0
+ 1270 003e 49       		.uleb128 0x49
+ 1271 003f 13       		.uleb128 0x13
+ 1272 0040 2F       		.uleb128 0x2f
+ 1273 0041 05       		.uleb128 0x5
+ 1274 0042 00       		.byte	0
+ 1275 0043 00       		.byte	0
+ 1276 0044 07       		.uleb128 0x7
+ 1277 0045 26       		.uleb128 0x26
+ 1278 0046 00       		.byte	0
+ 1279 0047 49       		.uleb128 0x49
+ 1280 0048 13       		.uleb128 0x13
+ 1281 0049 00       		.byte	0
+ 1282 004a 00       		.byte	0
+ 1283 004b 08       		.uleb128 0x8
+ 1284 004c 34       		.uleb128 0x34
+ 1285 004d 00       		.byte	0
+ 1286 004e 03       		.uleb128 0x3
+ 1287 004f 0E       		.uleb128 0xe
+ 1288 0050 3A       		.uleb128 0x3a
+ 1289 0051 0B       		.uleb128 0xb
+ 1290 0052 3B       		.uleb128 0x3b
+ 1291 0053 0B       		.uleb128 0xb
+ 1292 0054 49       		.uleb128 0x49
+ 1293 0055 13       		.uleb128 0x13
+ 1294 0056 3F       		.uleb128 0x3f
+ 1295 0057 19       		.uleb128 0x19
+ 1296 0058 02       		.uleb128 0x2
+ 1297 0059 18       		.uleb128 0x18
+ 1298 005a 00       		.byte	0
+ 1299 005b 00       		.byte	0
+ 1300 005c 09       		.uleb128 0x9
+ 1301 005d 21       		.uleb128 0x21
+ 1302 005e 00       		.byte	0
+ 1303 005f 49       		.uleb128 0x49
+ 1304 0060 13       		.uleb128 0x13
+ 1305 0061 2F       		.uleb128 0x2f
+ 1306 0062 0B       		.uleb128 0xb
+ 1307 0063 00       		.byte	0
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 24
+
+
+ 1308 0064 00       		.byte	0
+ 1309 0065 00       		.byte	0
+ 1310              		.section	.debug_aranges,"",%progbits
+ 1311 0000 14000000 		.4byte	0x14
+ 1312 0004 0200     		.2byte	0x2
+ 1313 0006 00000000 		.4byte	.Ldebug_info0
+ 1314 000a 04       		.byte	0x4
+ 1315 000b 00       		.byte	0
+ 1316 000c 0000     		.2byte	0
+ 1317 000e 0000     		.2byte	0
+ 1318 0010 00000000 		.4byte	0
+ 1319 0014 00000000 		.4byte	0
+ 1320              		.section	.debug_line,"",%progbits
+ 1321              	.Ldebug_line0:
+ 1322 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 1322      02003701 
+ 1322      00000201 
+ 1322      FB0E0D00 
+ 1322      01010101 
+ 1323              	.LASF9:
+ 1324 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1324      6E74385F 
+ 1324      7400
+ 1325              	.LASF16:
+ 1326 000a 63795F6D 		.ascii	"cy_metadata\000"
+ 1326      65746164 
+ 1326      61746100 
+ 1327              	.LASF1:
+ 1328 0016 756E7369 		.ascii	"unsigned char\000"
+ 1328      676E6564 
+ 1328      20636861 
+ 1328      7200
+ 1329              	.LASF17:
+ 1330 0024 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1330      43313120 
+ 1330      352E342E 
+ 1330      31203230 
+ 1330      31363036 
+ 1331 0057 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1331      20726576 
+ 1331      6973696F 
+ 1331      6E203233 
+ 1331      37373135 
+ 1332 008a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1332      66756E63 
+ 1332      74696F6E 
+ 1332      2D736563 
+ 1332      74696F6E 
+ 1333              	.LASF5:
+ 1334 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1334      20756E73 
+ 1334      69676E65 
+ 1334      6420696E 
+ 1334      7400
+ 1335              	.LASF3:
+ 1336 00c4 73686F72 		.ascii	"short unsigned int\000"
+ 1336      7420756E 
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 25
+
+
+ 1336      7369676E 
+ 1336      65642069 
+ 1336      6E7400
+ 1337              	.LASF13:
+ 1338 00d7 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1338      6574615F 
+ 1338      63757374 
+ 1338      6E766C00 
+ 1339              	.LASF12:
+ 1340 00e7 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1340      6574615F 
+ 1340      636F6E66 
+ 1340      69676563 
+ 1340      6300
+ 1341              	.LASF8:
+ 1342 00f9 756E7369 		.ascii	"unsigned int\000"
+ 1342      676E6564 
+ 1342      20696E74 
+ 1342      00
+ 1343              	.LASF7:
+ 1344 0106 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1344      206C6F6E 
+ 1344      6720756E 
+ 1344      7369676E 
+ 1344      65642069 
+ 1345              	.LASF10:
+ 1346 011d 75696E74 		.ascii	"uint8_t\000"
+ 1346      385F7400 
+ 1347              	.LASF15:
+ 1348 0125 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1348      6574615F 
+ 1348      666C6173 
+ 1348      6870726F 
+ 1348      74656374 
+ 1349              	.LASF14:
+ 1350 013a 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1350      6574615F 
+ 1350      776F6E76 
+ 1350      6C00
+ 1351              	.LASF11:
+ 1352 0148 73697A65 		.ascii	"sizetype\000"
+ 1352      74797065 
+ 1352      00
+ 1353              	.LASF6:
+ 1354 0151 6C6F6E67 		.ascii	"long long int\000"
+ 1354      206C6F6E 
+ 1354      6720696E 
+ 1354      7400
+ 1355              	.LASF2:
+ 1356 015f 73686F72 		.ascii	"short int\000"
+ 1356      7420696E 
+ 1356      7400
+ 1357              	.LASF4:
+ 1358 0169 6C6F6E67 		.ascii	"long int\000"
+ 1358      20696E74 
+ 1358      00
+ 1359              	.LASF19:
+ARM GAS  C:\Users\bouma\AppData\Local\Temp\cc1mbPZ8.s 			page 26
+
+
+ 1360 0172 433A5C50 		.ascii	"C:\\PaasAI-automaat\\Archive\\ultrasonic_test\\PSoC"
+ 1360      61617341 
+ 1360      492D6175 
+ 1360      746F6D61 
+ 1360      61745C41 
+ 1361 01a1 355F556C 		.ascii	"5_UltraSonicSensor\\PSoC5_UltraSonicSensor.cydsn\000"
+ 1361      74726153 
+ 1361      6F6E6963 
+ 1361      53656E73 
+ 1361      6F725C50 
+ 1362              	.LASF0:
+ 1363 01d1 7369676E 		.ascii	"signed char\000"
+ 1363      65642063 
+ 1363      68617200 
+ 1364              	.LASF18:
+ 1365 01dd 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1365      72617465 
+ 1365      645F536F 
+ 1365      75726365 
+ 1365      5C50536F 
+ 1366              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

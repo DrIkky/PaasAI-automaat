@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Source Files\main.c">
+<ExpandedNodeIds>
+<v>PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\TopDesign</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\Pins</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\Analog</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\Clocks</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\Interrupts</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\DMA</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\System</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\Directives</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\Flash Security</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\EEPROM</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Header Files</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Header Files\cyapicallbacks.h</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Source Files</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Source Files\main.c</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Generated_Source</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Generated_Source\PSoC5\Echo</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Generated_Source\PSoC5\Trigr</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\TopDesign</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\Pins</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\Analog</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\Clocks</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\Interrupts</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\DMA</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\System</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\Directives</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\Flash Security</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydwr\EEPROM</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Header Files</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Header Files\cyapicallbacks.h</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Source Files</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Source Files\main.c</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Generated_Source</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\Generated_Source\PSoC5</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\TopDesign</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\TopDesign</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_UART.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigr.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\PSoC5_UltraSonicSensor.elf</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\PSoC5_UltraSonicSensor.hex</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\PSoC5_UltraSonicSensor.map</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.gpdsc</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.rpt</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_UART.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigr.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\PSoC5_UltraSonicSensor.elf</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\PSoC5_UltraSonicSensor.hex</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CortexM3\ARM_GCC_541\Debug\PSoC5_UltraSonicSensor.map</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.gpdsc</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.rpt</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC 5LP Architecture TRM</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CY8C58LP Family Datasheet</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\System Reference Guides</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\System Reference Guides\cy_boot_v5_50</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\cy_isr_v1_70.pdf</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\cy_pins_v2_20</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\PSoC 5LP Architecture TRM</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\CY8C58LP Family Datasheet</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\System Reference Guides</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\System Reference Guides\cy_boot_v5_50</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\cy_isr_v1_70.pdf</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\cy_pins_v2_20</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor\UART_v2_50.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\PSoC5_UltraSonicSensor.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\PSoC5_UltraSonicSensor.cydsn\PSoC5_UltraSonicSensor.cydwr" />
+<name v=".\PSoC5_UltraSonicSensor.cydsn\main.c" />
+<name v=".\PSoC5_UltraSonicSensor.cydsn\Generated_Source\PSoC5\Echo.c" />
+<name v=".\PSoC5_UltraSonicSensor.cydsn\Generated_Source\PSoC5\Trigr.h" />
+<name v=".\PSoC5_UltraSonicSensor.cydsn\Generated_Source\PSoC5\Trigr.c" />
+<name v=".\PSoC5_UltraSonicSensor.cydsn\cyapicallbacks.h" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1519, 703" SelectedTabbedMdiWindow="cf9a21c7-d8ab-49ac-8182-a8be4d3d4fb4"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="a3df719b-88e1-4806-8bf2-1a690409443a" /><DocumentWindow Key="C:\PaasAI-automaat\Archive\ultrasonic_test\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydsn\TopDesign\TopDesign.cysch" Guid="4b97e1da-7814-40ae-8621-e561bb10dcb1" /><DocumentWindow Key="C:\PaasAI-automaat\Archive\ultrasonic_test\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydsn\PSoC5_UltraSonicSensor.cydwr" Guid="8f121110-e341-4aad-9100-bede717cabea" /><DocumentWindow Key="C:\PaasAI-automaat\Archive\ultrasonic_test\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydsn\main.c" Guid="cf9a21c7-d8ab-49ac-8182-a8be4d3d4fb4" /><DocumentWindow Key="C:\PaasAI-automaat\Archive\ultrasonic_test\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydsn\Generated_Source\PSoC5\Echo.c" Guid="dad0d553-24c0-4785-9c6c-55e6bef55b18" /><DocumentWindow Key="C:\PaasAI-automaat\Archive\ultrasonic_test\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydsn\Generated_Source\PSoC5\Trigr.h" Guid="3e56edcf-85f4-402a-960b-154d973b5a8e" /><DocumentWindow Key="C:\PaasAI-automaat\Archive\ultrasonic_test\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydsn\Generated_Source\PSoC5\Trigr.c" Guid="1df533c7-3fd8-4114-a77e-6b9420d018e5" /><DocumentWindow Key="C:\PaasAI-automaat\Archive\ultrasonic_test\PSoC5_UltraSonicSensor\PSoC5_UltraSonicSensor.cydsn\cyapicallbacks.h" Guid="4d4b5d52-b39d-4157-aa27-8a52d9d5fd6e" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
