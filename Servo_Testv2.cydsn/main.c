@@ -2,6 +2,8 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
+#include "AHT21.h"
+#include <stdio.h>
 
 volatile uint8 servoCounts[4] = {0, 0, 0, 0}; 
 
@@ -38,14 +40,11 @@ CY_ISR(MyUART_Handler)
     }
 }
 
-/* NIEUWE Hulpfunctie: Laat de lopende band voor een vaste tijd draaien, met instelbare snelheid */
 void BeweegBandTijd(uint32 milliseconden)
 {
 
     uint32 delayUs = 125; 
     
-    // De PSoC berekent nu volautomatisch hoeveel stappen hij moet 
-    // zetten om exact op jouw gevraagde 'milliseconden' uit te komen!
     uint32 totaleTijdPerStapUs = delayUs * 2;
     uint32 aantalStappen = (milliseconden * 1000) / totaleTijdPerStapUs;
     
@@ -61,7 +60,6 @@ void BeweegBandTijd(uint32 milliseconden)
     CyDelay(500); 
 }
 
-/* Aangepaste hulpfunctie met Hardware Latch Check & Wokkel Anti-Jam */
 void MoveServoWithCheck(void (*dispenseServo)(uint16), void (*wokkelServo)(uint16), uint8 targetCount)
 {
     for(int i = 0; i < targetCount; i++)
@@ -79,50 +77,74 @@ void MoveServoWithCheck(void (*dispenseServo)(uint16), void (*wokkelServo)(uint1
             CyDelayUs(10); 
             Pin_Reset_Laser_Write(0);
 
-            // 2. Open de deurtjes-servo en laat het ei vallen
-            dispenseServo(610);   
+            dispenseServo(600);   
             CyDelay(800); 
-            
-            // 3. Sluit de deurtjes-servo
-            dispenseServo(1400);  
+
+            dispenseServo(1500);  
             CyDelay(500); 
 
-            // 4. CHECK DE LATCH: Is er een ei gevallen?
             if((Status_Laser_Read() & 0x01) == 0) 
             {
-                // Ja! De laser heeft wat gezien.
                 dropSuccess = 1; 
             }
             else 
             {
-                // JAM DETECTED! We zetten de specifieke wokkel aan.
+                // JAM DETECTED
                 
-                wokkelServo(1700);  // Draai de wokkel vooruit
-                CyDelay(800);       // Laat hem 0.8 seconden wrikken/graven
+                wokkelServo(1400);
+                CyDelay(800);       
                 
-                wokkelServo(1500);  // Stop de wokkel
-                CyDelay(500);       // Geef de eitjes de tijd om omlaag te zakken
+                wokkelServo(1500);
+                CyDelay(500);
             }
         }
     }
 }
 
-/* NIEUWE HULPFUNCTIE: Dispenseert 1 bakje op de lopende band */
 void DispenseBakje(void)
 {
-    // Beweeg Servo A (PWM_9) van 10 naar 170, en Servo B (PWM_10) van 170 naar 10
-    PWM_9_WriteCompare(2400);  // 170 graden
-    PWM_10_WriteCompare(600);  // 10 graden
+    int stapGrootte = 30; 
+    int wachtTijd = 15;   
     
-    // Wacht even tot het mechanisme is gedraaid en het bakje is gevallen
-    CyDelay(600); 
+    int slagLengte = 900; // GETAL KLEINER OM DE AFSTAND TE VERKLEINEN
+
+    // 1. LANGZAAM OPENEN (Bakje laten vallen)
+    for(int i = 0; i <= slagLengte; i += stapGrootte)
+    {
+        PWM_9_WriteCompare(600 + i);   // Start op 600, telt op
+        PWM_10_WriteCompare(2400 - i); // Start op 2400, trekt af
+        CyDelay(wachtTijd);            
+    }
     
-    // Zet de servo's weer terug in de "rust/grijp" positie voor het volgende bakje
-    PWM_9_WriteCompare(600);   // Terug naar 10 graden
-    PWM_10_WriteCompare(2400); // Terug naar 170 graden
+    CyDelay(1000); // Wacht even tot bakje valt
     
-    // Geef ze de tijd om weer helemaal terug te draaien
-    CyDelay(600); 
+    // 2. LANGZAAM WEER DICHT (Terug naar de startpositie)
+    // We laten de 'i' nu weer netjes aftellen van de maximale uitslag naar 0
+    for(int i = slagLengte; i >= 0; i -= stapGrootte)
+    {
+        PWM_9_WriteCompare(600 + i);  
+        PWM_10_WriteCompare(2400 - i);  
+        CyDelay(wachtTijd);
+    }
+    
+    CyDelay(500); 
+}
+
+/* NIEUWE HULPFUNCTIE: Laat het Nextion scherm naar een andere pagina springen */
+void Nextion_GaNaarPagina(uint8 paginaNummer)
+{
+    char buffer[20];
+    
+    // Maak het commando, bijvoorbeeld "page 2"
+    sprintf(buffer, "page %d", paginaNummer); 
+    
+    // Stuur het commando via UART
+    UART_1_PutString(buffer);
+    
+    // Stuur de 3 verplichte afsluit-bytes
+    UART_1_PutChar(0xFF);
+    UART_1_PutChar(0xFF);
+    UART_1_PutChar(0xFF);
 }
 
 int main(void)
@@ -132,6 +154,9 @@ int main(void)
     // Start UART and interrupts
     UART_1_Start();
     isr_UART_StartEx(MyUART_Handler);
+    
+    I2C_1_Start();
+    AHT21_Start(); // Roep je eigen start-functie aan
     
     // Start Servo PWMs voor de deurtjes
     PWM_1_Start();
@@ -145,6 +170,8 @@ int main(void)
     PWM_7_Start();
     PWM_8_Start();
 
+    PWM_9_Start();
+    PWM_10_Start();
     // Initialize Deurtjes-Servos to middle (dicht)
     PWM_1_WriteCompare(1500);
     PWM_2_WriteCompare(1500);
@@ -156,17 +183,39 @@ int main(void)
     PWM_6_WriteCompare(1500);
     PWM_7_WriteCompare(1500);
     PWM_8_WriteCompare(1500);
+    
+    // ---> VOEG DIT TOE: Zet de bakjes-servo's in rustpositie <---
+    PWM_9_WriteCompare(600);   // 10 graden
+    PWM_10_WriteCompare(2400); // 170 graden
 
     // Initialiseer Stepper pinnen
     Pin_Step_Write(0);
     Pin_Dir_Write(1); 
+        
 
+    
     for(;;)
     {
         // WACHTEN OP SCHERM (Selectie gemaakt?)
         if(startCommandReceived == 1)
         {
             startCommandReceived = 0; // Vlag direct weer omlaag
+            
+            
+            
+            // ... jouw bestaande automaat code ...
+            
+            // Voorbeeld: Lees de temperatuur en stuur hem naar je Nextion variabele 'vaTemp'
+            int huidigeTemp = AHT21_MeetTemperatuur();
+            
+            char buffer[30];
+            sprintf(buffer, "page0.vaTemp.val=%d", huidigeTemp);
+            UART_1_PutString(buffer);
+            UART_1_PutChar(0xFF); UART_1_PutChar(0xFF); UART_1_PutChar(0xFF);
+        
+        
+        
+            DispenseBakje();
             
             // Omdat we geen sensor meer hebben om op het doosje te wachten, 
             // bouwen we hier een veiligheidspauze in van 2 seconden nadat op
@@ -175,25 +224,28 @@ int main(void)
             
             // 1. BEWEEG NAAR SERVO 1 (Vanaf de startpositie)
             // Vul in hoeveel milliseconden hij hiervoor moet rijden (bijv. 3000 ms = 3 sec)
-            BeweegBandTijd(3000); 
+            BeweegBandTijd(2500); 
             MoveServoWithCheck(PWM_1_WriteCompare, PWM_5_WriteCompare, servoCounts[0]);
 
             // 2. BEWEEG NAAR SERVO 2 (Vanaf servo 1)
             // Vul in hoeveel milliseconden de afstand tussen dispenser 1 en 2 is.
-            BeweegBandTijd(2000); 
+            BeweegBandTijd(2200); 
             MoveServoWithCheck(PWM_2_WriteCompare, PWM_6_WriteCompare, servoCounts[1]);
 
             // 3. BEWEEG NAAR SERVO 3 (Vanaf servo 2)
-            BeweegBandTijd(2000); 
+            BeweegBandTijd(2300); 
             MoveServoWithCheck(PWM_3_WriteCompare, PWM_7_WriteCompare, servoCounts[2]);
 
             // 4. BEWEEG NAAR SERVO 4 (Vanaf servo 3)
-            BeweegBandTijd(2000); 
+            BeweegBandTijd(2300); 
             MoveServoWithCheck(PWM_4_WriteCompare, PWM_8_WriteCompare, servoCounts[3]);
             
             // 5. BEWEEG NAAR DE UITGANG
             // Laat de band nog een paar seconden draaien zodat het doosje bij de klant komt
-            BeweegBandTijd(3500); 
+            BeweegBandTijd(4000); 
+            
+            Nextion_GaNaarPagina(6);
+            
             
             // HIERNA IS DE SEQUENTIE KLAAR EN WACHT HIJ OP DE VOLGENDE KLANT!
         }
